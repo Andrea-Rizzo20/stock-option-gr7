@@ -1,4 +1,5 @@
 import { Tab, Tabs } from "react-bootstrap";
+import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 
 const MyTabs = ({ renderKey }) => {
@@ -9,12 +10,7 @@ const MyTabs = ({ renderKey }) => {
       className="mb-3 d-flex flex-row"
     >
       <Tab eventKey="login" title="Login">
-        <form>
-          <input type="text" placeholder="Username"></input>
-          <input type="password" placeholder="Password"></input>
-          <button type="submit">Login</button>
-          <button>Forgot Password</button>
-        </form>
+        <LoginForm/>
       </Tab>
       <Tab eventKey="signup" title="Signup">
         <SignUpForm />
