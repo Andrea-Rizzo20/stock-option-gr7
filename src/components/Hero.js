@@ -5,7 +5,7 @@ export class Hero extends React.Component {
     return (
       <div className="heroGradient text-white vw-100">
           
-        <div className="row flex-column-reverse flex-md-row justify-content-around p-5 mt-5">
+        <div className="row flex-column-reverse flex-md-row justify-content-around p-3 p-md-5  mt-5 mx-0">
           <div className="col-12 col-md-6">
             <img src={Pic1} className="w-100" alt="immagine computer" />
           </div>
@@ -16,13 +16,14 @@ export class Hero extends React.Component {
           </div>
         </div>
 
-        <div className="row col-12 text-center">
+        
+
+        <div className="text-center">
           <p className="fw-bold fst-italic">Enter your email to create or restart your membership</p>
           <form action="#" className="d-flex flex-column justify-content-center align-items-center ">
-            <input type="text" placeholder="Email" className="mb-2 bg-transparent border border-white text-white" />
+            <input type="text" placeholder="Email" className="mb-2 bg-transparent border border-white text-white text-center" />
             <button type="submit" className="fw-bold heroBGButton text-white mb-4 border border-white px-3">Get Started</button>
           </form>
-
         </div>
       </div>
     );
