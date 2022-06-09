@@ -13,7 +13,7 @@ const Header = () => {
     <Navbar className="heroGradient" expand="md">
       <Container className="justify-content-space-between">
         <Navbar.Brand className="w-25 d-inline d-md-none" href="#home">
-          <img src={logoMobile} alt="logo optionsfy" className="w-25"></img>
+          <img src={logoMobile} alt="logo optionsfy" className="w-50"></img>
         </Navbar.Brand>
         <Navbar.Toggle
           className="justify-content-end border-0 burgerMenu "

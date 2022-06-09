@@ -7,17 +7,19 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <section className="container">
+      <section className="fluid-container">
         {dataJson.map((card, index) => (
+          <div className="row" key={index}>
           <MyCard
-            key={index}
             contents={card}
             className={
               index % 2 === 0
-                ? "d-flex flex-column flex-md-row"
-                : "d-flex flex-column flex-md-row-reverse"
+                ? "d-flex flex-column flex-md-row col-10 mx-auto border-0 my-5"
+                : "d-flex flex-column flex-md-row-reverse col-10 mx-auto border-0 "
             }
+            BodyClass={index % 2 === 0 ? "card-text-box-right col-12 col-md-6 py-5" : "card-text-box-left  col-12 col-md-6 py-5 "}
           />
+        </div>
         ))}
       </section>
       <CardsSection />
