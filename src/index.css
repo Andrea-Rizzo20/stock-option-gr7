@@ -7,13 +7,13 @@
 .heroBGButton{
     background-color: rgba(101, 132, 140, 1);
 }
+
 /* LORENZO */
 .cardborders {
     border-radius: 20px;
 }
 .offerButton1 {
-background-color: #364261
-; /* Green */
+background-color: #364261;
   border: none;
   color: white;
   padding: 15px 32px;
