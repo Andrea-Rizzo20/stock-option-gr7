@@ -3,26 +3,24 @@ import Pic1 from "./Assets/pic-1.png";
 export class Hero extends React.Component {
   render() {
     return (
-      <div className="gradient text-white">
+      <div className="heroGradient text-white vw-100">
           
-        <div className="d-flex justify-content-around p-5 mt-5">
-          <div>
-            <img src={Pic1} alt="immagine computer" />
+        <div className="row flex-column-reverse flex-md-row justify-content-around p-5 mt-5">
+          <div className="col-12 col-md-6">
+            <img src={Pic1} className="w-100" alt="immagine computer" />
           </div>
 
-          <div className="d-flex flex-column justify-content-center align-items-end text-white">
-            <h1>THE ONLY DONE</h1>
-            <h1>FOR YOU OPTION</h1>
-            <h1>PICKER</h1>
-            <p className="mt-3">Get trade alerts. Cancel anytime</p>
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-center text-white">
+            <h1 className="text-center text-md-end px-md-5">THE ONLY DONE FOR YOU OPTION PICKER</h1>
+            <p className="mt-3 text-center text-md-end px-md-5">Get trade alerts. Cancel anytime</p>
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="row col-12 text-center">
           <p className="fw-bold fst-italic">Enter your email to create or restart your membership</p>
           <form action="#" className="d-flex flex-column justify-content-center align-items-center ">
             <input type="text" placeholder="Email" className="mb-2 bg-transparent border border-white text-white" />
-            <button type="submit" className="fw-bold bgButton text-white mb-4 border border-white px-3">Get Started</button>
+            <button type="submit" className="fw-bold heroBGButton text-white mb-4 border border-white px-3">Get Started</button>
           </form>
 
         </div>

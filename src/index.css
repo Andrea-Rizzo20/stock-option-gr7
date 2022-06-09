@@ -1,7 +1,7 @@
-.gradient{
+.heroGradient{
     background: linear-gradient(to left,rgba(35, 59, 114, 1),rgba(52, 56, 75, 1) )
 }
 
-.bgButton{
+.heroBGButton{
     background-color: rgba(101, 132, 140, 1);
 }
