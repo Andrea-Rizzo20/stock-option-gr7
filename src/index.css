@@ -1,0 +1,33 @@
+/* LORENZO */
+.cardborders {
+    border-radius: 20px;
+}
+.offerButton1 {
+background-color: #364261
+; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.offerButton2 {
+    background-color: #364261
+    ; /* Green */
+      border: none;
+      color: #DEA40D
+      ;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 15px;
+    }
+
+.footer-cards-gradient {
+    background: linear-gradient(to right,rgba(35, 59, 114, 1),rgba(52, 56, 75, 1) )
+}
