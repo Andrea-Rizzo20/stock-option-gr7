@@ -7,7 +7,7 @@ const MyTabs = ({ renderKey }) => {
     <Tabs
       defaultActiveKey={renderKey}
       id="uncontrolled-tab-example"
-      className="mb-3 d-flex flex-row"
+      className="mb-3 d-flex flex-row justify-content-center gap-2  w-100"
     >
       <Tab eventKey="login" title="Login">
         <LoginForm/>

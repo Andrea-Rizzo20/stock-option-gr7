@@ -74,3 +74,69 @@ background-color: #364261;
 .card-text-title{
     color: #AEBFC5;
 }
+
+.formButton {
+    border: 1px solid white;
+    color: white;
+    width: 70%;
+}
+
+.formBackground {
+  background: linear-gradient(to right,rgba(35, 59, 114, 1),rgba(52, 56, 75, 1) );
+}
+
+.inputForm{
+    background: linear-gradient(to right,rgba(35, 59, 114, 1),rgba(52, 56, 75, 1) );
+    border: 1px solid white;
+    color: white;
+    width: 70%;
+}
+
+.modalCloseButton{
+    width: 40%;
+    border: 1px solid white;
+    color: white;
+}
+
+.modalCloseButton:hover{
+    background-color: rgba(101, 132, 140, 1);
+    border-color: white;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+button:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#uncontrolled-tab-example-tab-login{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+#uncontrolled-tab-example-tab-login:focus,  #uncontrolled-tab-example-tab-login:active,  #uncontrolled-tab-example-tab-login:hover{
+   background-color:white;
+   color: rgba(35, 59, 114, 1);
+   border: none;
+}
+
+
+
+
+
+
+#uncontrolled-tab-example-tab-signup{
+    width: 100%;
+}
+
+.nav-item{
+    width: 60%;
+}
