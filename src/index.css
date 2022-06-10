@@ -23,6 +23,7 @@ background-color: #364261;
   font-size: 16px;
   border-radius: 15px;
 }
+
 .offerButton2 {
     background-color: #364261;
       border: none;
@@ -38,6 +39,7 @@ background-color: #364261;
 .footer-cards-gradient {
     background: linear-gradient(to right,rgba(35, 59, 114, 1),rgba(52, 56, 75, 1) )
 }
+
 .burgerMenu:focus{
     box-shadow: none;
 }
@@ -74,6 +76,7 @@ background-color: #364261;
 .card-text-title{
     color: #AEBFC5;
 }
+
 
 .formButton {
     border: 1px solid white;
@@ -139,4 +142,10 @@ button:hover {
 
 .nav-item{
     width: 60%;
+}
+
+.row{
+ margin-left: 0 !important;
+ margin-right: 0 !important;
+
 }
