@@ -3,11 +3,11 @@ import logo from "../assets/logoFooter.png";
 const Footer = () => {
   return (
     <footer className="footer-cards-gradient">
-      <div className="container">
+      <div className="w-75 mx-auto">
         <div className="row mb-4">
           <img
             src={logo}
-            className="col-7 mx-auto col-md-4 mx-md-0 text-md-start text-center"
+            className="col-7 mx-auto col-md-2 mx-md-0 text-md-start text-center"
             alt="Optionsfy Logo"
           />
         </div>

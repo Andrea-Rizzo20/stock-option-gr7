@@ -3,7 +3,7 @@ import Pic1 from "./Assets/pic-1.png";
 export class Hero extends React.Component {
   render() {
     return (
-      <div className="heroGradient text-white vw-100">
+      <div className="heroGradient text-white w-100">
         <div className="row flex-column-reverse flex-md-row justify-content-around p-3 p-md-5 mx-0">
           <div className="col-12 col-md-6">
             <img src={Pic1} className="w-100" alt="immagine computer" />

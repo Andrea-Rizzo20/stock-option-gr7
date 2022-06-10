@@ -119,26 +119,32 @@ button:hover {
     -o-transform: scale(1.1);
 }
 
-#uncontrolled-tab-example-tab-login{
+#uncontrolled-tab-example-tab-login, #uncontrolled-tab-example-tab-signup{
     width: 100%;
     border: none;
     background-color: transparent;
 }
 
-#uncontrolled-tab-example-tab-login:focus,  #uncontrolled-tab-example-tab-login:active,  #uncontrolled-tab-example-tab-login:hover{
-   background-color:white;
-   color: rgba(35, 59, 114, 1);
+
+
+#uncontrolled-tab-example-tab-login:focus,  #uncontrolled-tab-example-tab-login:active,  #uncontrolled-tab-example-tab-login:hover, #uncontrolled-tab-example-tab-signup:focus,  #uncontrolled-tab-example-tab-signup:active,  #uncontrolled-tab-example-tab-signup:hover{
+   background-color:transparent;
+   color: white;
    border: none;
 }
 
-
-
-
-
-
-#uncontrolled-tab-example-tab-signup{
-    width: 100%;
+#uncontrolled-tab-example-tab-login:hover, #uncontrolled-tab-example-tab-signup:hover{
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
 }
+
+#uncontrolled-tab-example-tab-login:focus, #uncontrolled-tab-example-tab-signup:focus {
+    border: 1px solid white;
+}
+
 
 .nav-item{
     width: 60%;

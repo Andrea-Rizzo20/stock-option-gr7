@@ -17,7 +17,7 @@ const HomePage = () => {
                 ? "d-flex flex-column flex-md-row col-10 mx-auto border-0 my-5"
                 : "d-flex flex-column flex-md-row-reverse col-10 mx-auto border-0 "
             }
-            BodyClass={index % 2 === 0 ? "card-text-box-right col-12 col-md-6 py-5" : "card-text-box-left  col-12 col-md-6 py-5 "}
+            BodyClass={index % 2 === 0 ? "card-text-box-right col-12 col-md-8 py-5" : "card-text-box-left  col-12 col-md-8 py-5 "}
           />
         </div>
         ))}
