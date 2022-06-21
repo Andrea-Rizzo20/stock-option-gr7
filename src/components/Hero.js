@@ -1,5 +1,5 @@
 import React from "react";
-import Pic1 from "./Assets/pic-1.png";
+import Pic1 from "../assets/pic-1.png";
 export class Hero extends React.Component {
   render() {
     return (
