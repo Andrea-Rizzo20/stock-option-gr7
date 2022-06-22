@@ -7,14 +7,16 @@ import { Route, Routes } from "react-router-dom";
 import { NotFound } from "./Pages/NotFound";
 import { Protected } from "./Components/Protected";
 import { Dashboard } from "./Pages/Dashboard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
 
+
+
   return (
     <>
-      <Header />
+      <Header user={user} />
 
       <Routes>
         <Route index element={<HomePage />} />

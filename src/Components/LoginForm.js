@@ -1,10 +1,14 @@
 import { useState } from "react";
 
-const LoginForm = () => {
+const LoginForm = ({showModal}) => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+
+
+
 
   const inputHandle = (event) => {
     const { name, value } = event.target;
@@ -21,8 +25,20 @@ const LoginForm = () => {
     const database = JSON.parse(localStorage.getItem("database"));
     if (data.email === database.email && data.password === database.password) {
       localStorage.setItem("user", JSON.stringify(database));
+      showModal()
+    }else{
+      alert('Email o Password non corretti, riprova')
     }
+
+    setData({
+      email: "",
+      password: "",
+    })
+
+
+
   };
+
 
   return (
     <form
@@ -51,7 +67,7 @@ const LoginForm = () => {
         <button type="submit" className="formButton heroBGButton">
           Login
         </button>
-        <button className="formButton heroBGButton">Forgot Password</button>
+        <button type="button" className="formButton heroBGButton" onClick={showModal}>Forgot Password</button>
       </div>
     </form>
   );

@@ -2,7 +2,8 @@ import { Tab, Tabs } from "react-bootstrap";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 
-const MyTabs = ({ renderKey }) => {
+const MyTabs = ({ renderKey, showModal }) => {
+  console.log(showModal)
   return (
     <Tabs
       defaultActiveKey={renderKey}
@@ -10,10 +11,10 @@ const MyTabs = ({ renderKey }) => {
       className="mb-3 d-flex flex-row justify-content-center gap-2  w-100"
     >
       <Tab eventKey="login" title="Login">
-        <LoginForm/>
+        <LoginForm showModal={showModal}/>
       </Tab>
       <Tab eventKey="signup" title="Signup">
-        <SignUpForm />
+        <SignUpForm showModal={showModal} />
       </Tab>
     </Tabs>
   );

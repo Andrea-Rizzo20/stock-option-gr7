@@ -1,13 +1,18 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MyModal from "./MyModal";
 import logo from "../assets/logoFooter.png";
 import logoMobile from "../assets/logoMobile.png";
 import burgerIcon from "../assets/burgerIcon.png";
 
-const Header = () => {
+const Header = ({user}) => {
   const [modalShow, setModalShow] = useState(false);
   const [tabFocus, setTabFocus] = useState("");
+  const [userData, setUserData] = useState(null)
+
+  const onHide = () => setModalShow(false)
+
+
 
   return (
     <Navbar className="heroGradient" expand="md">
@@ -36,7 +41,7 @@ const Header = () => {
                 alt="Optionsfy Logo"
               />
             </Navbar.Brand>
-            <Nav.Link
+             <Nav.Link
               className="text-white"
               onClick={() => {
                 setTabFocus("login");
@@ -60,7 +65,7 @@ const Header = () => {
       <MyModal
         renderKey={tabFocus}
         show={modalShow}
-        onHide={() => setModalShow(false)}
+        onHide={onHide}
       />
     </Navbar>
   );

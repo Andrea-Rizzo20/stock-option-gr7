@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SignUpForm = () => {
+const SignUpForm = ({showModal}) => {
   const [data, setData] = useState({
     email: "",
     firstName: "",
@@ -22,7 +22,30 @@ const SignUpForm = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem("database", JSON.stringify(data));
+    if(data !=={
+      email: "",
+      firstName: "",
+      lastName: "",
+      phone: "",
+      password: "",
+      confPassword: "",
+      contract: false,
+    }){
+      localStorage.setItem("database", JSON.stringify(data));
+      setData({
+        email: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        password: "",
+        confPassword: "",
+        contract: false,
+      })
+
+    }
+    if(localStorage.getItem('database')){
+      alert('Registrazione avvenuta con successo')
+    }
   };
 
   return (
