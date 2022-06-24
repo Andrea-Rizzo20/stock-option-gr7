@@ -2,7 +2,7 @@ import { Modal, Button } from "react-bootstrap";
 import MyTabs from "./MyTabs";
 
 function MyModal(props) {
-const {renderKey, onHide, ...rest} = props
+const {renderKey, onHide,login, ...rest} = props
 console.log(onHide)
   return (
     <Modal
@@ -12,7 +12,7 @@ console.log(onHide)
       centered
     >
       <Modal.Body  className="formBackground p-0">
-        <MyTabs renderKey={props.renderKey} showModal={onHide} />
+        <MyTabs renderKey={props.renderKey} showModal={onHide} login={login} />
       </Modal.Body>
       <Modal.Footer  className="formBackground">
         <Button onClick={onHide} className="modalCloseButton heroBGButton" >Close</Button>
