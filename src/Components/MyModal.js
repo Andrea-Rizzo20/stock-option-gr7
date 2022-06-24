@@ -3,7 +3,6 @@ import MyTabs from "./MyTabs";
 
 function MyModal(props) {
 const {renderKey, onHide,login, ...rest} = props
-console.log(onHide)
   return (
     <Modal
       {...rest}
