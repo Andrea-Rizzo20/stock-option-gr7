@@ -5,6 +5,7 @@ import logo from "../assets/logoFooter.png";
 import logoMobile from "../assets/logoMobile.png";
 import burgerIcon from "../assets/burgerIcon.png";
 import { Navigate, useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = ({user,login}) => {
   const [modalShow, setModalShow] = useState(false);
@@ -14,6 +15,7 @@ const Header = ({user,login}) => {
   const onHide = () => setModalShow(false)
 
   const navigate = useNavigate()
+
 
 
 
@@ -35,8 +37,8 @@ const Header = ({user,login}) => {
           id="basic-navbar-nav"
         >
           <Nav className="d-flex gap-md-4 gap-0 justify-content-center align-items-end align-items-md-center">
-            <Nav.Link className="text-white">Pricing</Nav.Link>
-            <Nav.Link className="text-white">Features</Nav.Link>
+            <HashLink className="text-white text-decoration-none" to="/home#pricing" >Pricing</HashLink>
+            <HashLink className="text-white text-decoration-none" to="/home#features">Features</HashLink>
             <Navbar.Brand className="w-25 py-0" onClick={() => navigate('/')}>
               <img
                 src={logo}

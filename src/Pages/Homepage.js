@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <section className="fluid-container">
+      <section className="fluid-container" id="features">
         {dataJson.map((card, index) => (
           <div className="row" key={index}>
             <MyCard
@@ -26,7 +26,9 @@ const HomePage = () => {
           </div>
         ))}
       </section>
-      <CardsSection />
+      <section id='pricing'>
+        <CardsSection />
+      </section>
     </div>
   );
 };

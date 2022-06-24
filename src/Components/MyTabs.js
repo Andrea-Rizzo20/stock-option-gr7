@@ -3,7 +3,6 @@ import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 
 const MyTabs = ({ renderKey, showModal,login }) => {
-  console.log(showModal)
   return (
     <Tabs
       defaultActiveKey={renderKey}
