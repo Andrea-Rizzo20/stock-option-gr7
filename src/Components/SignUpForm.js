@@ -11,6 +11,8 @@ const SignUpForm = ({showModal}) => {
     contract: false,
   });
 
+
+
   const inputHandle = (event) => {
     const { name, type, value, checked } = event.target;
     setData((data) => {
@@ -41,6 +43,7 @@ const SignUpForm = ({showModal}) => {
         confPassword: "",
         contract: false,
       })
+      showModal()
 
     }
     if(localStorage.getItem('database')){
