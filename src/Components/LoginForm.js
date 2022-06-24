@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const LoginForm = ({showModal}) => {
+const LoginForm = ({showModal,login}) => {
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -26,6 +26,7 @@ const LoginForm = ({showModal}) => {
     if (data.email === database.email && data.password === database.password) {
       localStorage.setItem("user", JSON.stringify(database));
       showModal()
+      login()
     }else{
       alert('Email o Password non corretti, riprova')
     }
