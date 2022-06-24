@@ -1,5 +1,5 @@
 import MyCard from "../Components/MyCard";
-import dataJson from "../Locale/myJSON.json";
+import dataJson from "../Locale/homeCardContent.json";
 import { Hero } from "../Components/Hero";
 import { CardsSection } from "../Components/CardsSection";
 

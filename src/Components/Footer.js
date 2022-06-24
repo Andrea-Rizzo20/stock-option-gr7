@@ -2,7 +2,7 @@ import logo from "../assets/logoFooter.png";
 
 const Footer = () => {
   return (
-    <footer className="footer-cards-gradient">
+    <footer className="footer-cards-gradient py-5">
       <div className="w-75 mx-auto">
         <div className="row mb-4">
           <img
