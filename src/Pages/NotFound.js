@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import notFoundPic from "../assets/notFound.gif";
 
 export function NotFound() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   return (
     <div className="container p-5 w-100 mx-auto d-flex flex-column justify-content-center align-items-center">
       <img
@@ -15,7 +18,7 @@ export function NotFound() {
         className="heroBGButton rounded-pill p-3 col-md-4 col-8"
         onClick={() => navigate("/")}
       >
-        Torna alla Home
+        {t("notFound")}
       </button>
     </div>
   );

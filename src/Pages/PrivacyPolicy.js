@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 
 export function PrivacyPolicy() {
   const { i18n, t } = useTranslation();
-  const toIta = () => {
-    i18n.changeLanguage("it");
-  };
+  // const toIta = () => {
+  //   i18n.changeLanguage("it");
+  // };
   const toEng = () => {
     i18n.changeLanguage("en");
   };
@@ -35,7 +35,7 @@ export function PrivacyPolicy() {
         );
       })}
 
-      <button onClick={toIta}>ita</button>
+      {/* <button onClick={toIta}>ita</button> */}
       <button onClick={toEng}>eng</button>
     </div>
   );

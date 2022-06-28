@@ -1,23 +1,22 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useEffect, useState } from "react";
-import MyModal from "./MyModal";
+import { useState } from "react";
+import ModalComponent from "./ModalComponent";
 import logo from "../assets/logoFooter.png";
 import logoMobile from "../assets/logoMobile.png";
 import burgerIcon from "../assets/burgerIcon.png";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 
 const Header = ({ user, login }) => {
   const [modalShow, setModalShow] = useState(false);
   const [tabFocus, setTabFocus] = useState("");
-  const [userData, setUserData] = useState(null);
 
   const onHide = () => setModalShow(false);
 
   const navigate = useNavigate();
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Navbar className="heroGradient" expand="md">
@@ -44,13 +43,13 @@ const Header = ({ user, login }) => {
               className="text-white text-decoration-none"
               to="/home#pricing"
             >
-              {t("header.pricing")}
+              {t("header.navbar.pricing")}
             </HashLink>
             <HashLink
               className="text-white text-decoration-none"
               to="/home#features"
             >
-              {t("header.features")}
+              {t("header.navbar.features")}
             </HashLink>
             <Navbar.Brand className="w-25 py-0" onClick={() => navigate("/")}>
               <img
@@ -67,14 +66,14 @@ const Header = ({ user, login }) => {
                   setModalShow(true);
                 }}
               >
-                {t("header.login")}
+                {t("header.navbar.login")}
               </Nav.Link>
             ) : (
               <Nav.Link
                 className="text-white"
                 onClick={() => navigate("dashboard")}
               >
-                {t("header.dashboard")}
+                {t("header.navbar.dashboard")}
               </Nav.Link>
             )}
             {!user ? (
@@ -85,7 +84,7 @@ const Header = ({ user, login }) => {
                   setModalShow(true);
                 }}
               >
-                {t("header.signUp")}
+                {t("header.navbar.signUp")}
               </Nav.Link>
             ) : (
               <Nav.Link
@@ -95,13 +94,13 @@ const Header = ({ user, login }) => {
                   localStorage.removeItem("user");
                 }}
               >
-                {t("header.logout")}
+                {t("header.navbar.logout")}
               </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <MyModal
+      <ModalComponent
         renderKey={tabFocus}
         show={modalShow}
         onHide={onHide}

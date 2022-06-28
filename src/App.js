@@ -3,12 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./Pages/Homepage";
 import Footer from "./Components/Footer";
 import "./index.css";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { NotFound } from "./Pages/NotFound";
 import { Protected } from "./Components/Protected";
 import { Dashboard } from "./Pages/Dashboard";
 import { useEffect, useState } from "react";
 import { PrivacyPolicy } from "./Pages/PrivacyPolicy";
+import { Disclaimer } from "./Pages/Disclaimer";
+import { TermsOfService } from "./Pages/TermsOfService";
 
 const App = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -37,6 +39,8 @@ const App = () => {
           <Route path="dashboard" element={<Dashboard user={user} />} />
         </Route>
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="disclaimer" element={<Disclaimer />} />
+        <Route path="terms-of-service" element={<TermsOfService />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

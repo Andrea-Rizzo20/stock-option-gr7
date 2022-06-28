@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const SignUpForm = ({showModal}) => {
+const SignUpForm = ({ showModal }) => {
   const [data, setData] = useState({
     email: "",
     firstName: "",
@@ -11,7 +12,7 @@ const SignUpForm = ({showModal}) => {
     contract: false,
   });
 
-
+  const { t } = useTranslation();
 
   const inputHandle = (event) => {
     const { name, type, value, checked } = event.target;
@@ -22,17 +23,21 @@ const SignUpForm = ({showModal}) => {
       };
     });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    if(data !=={
-      email: "",
-      firstName: "",
-      lastName: "",
-      phone: "",
-      password: "",
-      confPassword: "",
-      contract: false,
-    }){
+    if (
+      data !==
+      {
+        email: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        password: "",
+        confPassword: "",
+        contract: false,
+      }
+    ) {
       localStorage.setItem("database", JSON.stringify(data));
       setData({
         email: "",
@@ -42,12 +47,11 @@ const SignUpForm = ({showModal}) => {
         password: "",
         confPassword: "",
         contract: false,
-      })
-      showModal()
-
+      });
+      showModal();
     }
-    if(localStorage.getItem('database')){
-      alert('Registrazione avvenuta con successo')
+    if (localStorage.getItem("database")) {
+      alert(t("header.signUpForm.alert"));
     }
   };
 
@@ -60,7 +64,7 @@ const SignUpForm = ({showModal}) => {
         type="text"
         name="firstName"
         value={data.firstName}
-        placeholder="First Name"
+        placeholder={t("header.signUpForm.firstName")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -68,7 +72,7 @@ const SignUpForm = ({showModal}) => {
         type="text"
         name="lastName"
         value={data.lastName}
-        placeholder="Last Name"
+        placeholder={t("header.signUpForm.lastName")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -76,7 +80,7 @@ const SignUpForm = ({showModal}) => {
         type="email"
         name="email"
         value={data.email}
-        placeholder="Email"
+        placeholder={t("header.signUpForm.email")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -84,7 +88,7 @@ const SignUpForm = ({showModal}) => {
         type="password"
         name="password"
         value={data.password}
-        placeholder="Password"
+        placeholder={t("header.signUpForm.password")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -92,7 +96,7 @@ const SignUpForm = ({showModal}) => {
         type="password"
         name="confPassword"
         value={data.confPassword}
-        placeholder="Confirm Password"
+        placeholder={t("header.signUpForm.confirmPassword")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -100,7 +104,7 @@ const SignUpForm = ({showModal}) => {
         type="tel"
         name="phone"
         value={data.phone}
-        placeholder="Telephone"
+        placeholder={t("header.signUpForm.phone")}
         className="inputForm text-center"
         onChange={inputHandle}
       ></input>
@@ -113,11 +117,11 @@ const SignUpForm = ({showModal}) => {
           onChange={inputHandle}
         ></input>
         <label className="text-white fw-bold" htmlFor="contract">
-          I agree to Terms of Service
+          {t("header.signUpForm.contract")}
         </label>
       </div>
       <button type="submit" className="formButton heroBGButton">
-        Sign Up
+        {t("header.signUpForm.signUp")}
       </button>
     </form>
   );

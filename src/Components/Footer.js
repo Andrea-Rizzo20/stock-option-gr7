@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import logo from "../assets/logoFooter.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer-cards-gradient py-5">
       <div className="w-75 mx-auto">
@@ -13,24 +17,29 @@ const Footer = () => {
         </div>
         <div className="row flex-column-reverse flex-md-row">
           <p className="col-10 mx-auto text-center text-md-start col-md-6 text-white ">
-            Disclaimer: Please be aware that trading stocks, futures, stock
-            options, and futures options involves a substantial risk of loss and
-            is not suitable for all investors. Past performance is not
-            necessarily indicative of future results. INFORMATION IS FOR GENERAL
-            EDUCATIONAL AND RESEARCH PURPOSES AND SHOULD NOT BE CONSTRUED AS
-            INDIVIDUAL INVESTMENT ADVICE. More info here
+            {t("footer.disclaimerText")}
           </p>
           <ul className="col-10 mx-auto text-center text-md-end col-md-6 text-white list-unstyled">
             <li>
-              <a className="text-white text-decoration-none">
-                TERMS OF SERVICE
-              </a>
+              <Link
+                to="terms-of-service"
+                className="text-white text-decoration-none"
+              >
+                {t("footer.termOfService")}
+              </Link>
             </li>
             <li>
-              <a className="text-white text-decoration-none">PRIVACY POLICY</a>
+              <Link
+                to="privacy-policy"
+                className="text-white text-decoration-none"
+              >
+                {t("footer.privacyPolicy")}
+              </Link>
             </li>
             <li>
-              <a className="text-white text-decoration-none">DISCLAIMER</a>
+              <Link to="disclaimer" className="text-white text-decoration-none">
+                {t("footer.disclaimer")}
+              </Link>
             </li>
           </ul>
         </div>
