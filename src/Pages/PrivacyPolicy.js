@@ -1,13 +1,9 @@
 import { useTranslation } from "react-i18next";
+import GoToTop from "../Components/GoToTop";
 
 export function PrivacyPolicy() {
-  const { i18n, t } = useTranslation();
-  // const toIta = () => {
-  //   i18n.changeLanguage("it");
-  // };
-  const toEng = () => {
-    i18n.changeLanguage("en");
-  };
+  const { t } = useTranslation();
+
   return (
     <div className="container py-5">
       {t("privacyPolicy", { returnObjects: true }).map((item) => {
@@ -34,9 +30,7 @@ export function PrivacyPolicy() {
           </>
         );
       })}
-
-      {/* <button onClick={toIta}>ita</button> */}
-      <button onClick={toEng}>eng</button>
+      <GoToTop />
     </div>
   );
 }
