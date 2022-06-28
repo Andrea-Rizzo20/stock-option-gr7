@@ -1,0 +1,319 @@
+{
+  "header": {
+    "pricing": "Prezzi",
+    "features": "Servizi",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "signUp": "Iscriviti",
+    "logout": "Disconnetti"
+  },
+  "privacyPolicy": [
+    {
+      "pageTitle": "Informativa sulla Privacy",
+      "pageSubtitle": "Ultimo aggiornamento: 15 Febbraio , 2022. Questa Informativa sulla privacy descrive le nostre politiche e procedure sulla raccolta, l'uso e la divulgazione delle tue informazioni quando utilizzi il Servizio e ti informa sui tuoi diritti alla privacy e su come la legge ti protegge. Utilizziamo i tuoi dati personali per fornire e migliorare il Servizio. Utilizzando il Servizio, accetti la raccolta e l'utilizzo delle informazioni in conformità con la presente Informativa sulla privacy."
+    },
+    {
+      "sectionMainTitle": "Interpretazione e definizioni",
+      "sectionTitle": "Interpretazione",
+      "sectionTextContent": "Le parole di cui la lettera iniziale è maiuscola hanno significati definiti nelle seguenti condizioni. Le seguenti definizioni avranno lo stesso significato indipendentemente dal fatto che appaiano al singolare o al plurale."
+    },
+    {
+      "sectionTitle": "Definizioni",
+      "sectionTextContent": "Ai fini della presente Informativa sulla privacy:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": "Account ",
+          "content": "indica un account unico creato per te per accedere al nostro Servizio o parti del nostro Servizio."
+        },
+        {
+          "id": 1,
+          "title": "Azienda ",
+          "content": "(denominata 'la Società', 'Noi' o 'Nostro' nel presente Accordo) si riferisce a Optionsfy LLC, 7901 4th St N, STE 300 St. Petersburg, FL 33702."
+        },
+        {
+          "id": 2,
+          "title": "Cookies ",
+          "content": "sono piccoli file che vengono inseriti sul tuo computer, dispositivo mobile o qualsiasi altro dispositivo da un sito Web, contenenti i dettagli della tua cronologia di navigazione su quel sito Web tra i suoi numerosi usi."
+        },
+        {
+          "id": 3,
+          "title": "Paese ",
+          "content": "si riferisce a: Florida, Stati Uniti"
+        },
+        {
+          "id": 4,
+          "title": "Dispositivo ",
+          "content": "indica qualsiasi dispositivo in grado di accedere al Servizio come un computer, un cellulare o un tablet digitale."
+        },
+        {
+          "id": 5,
+          "title": "Dati personali",
+          "content": "è qualsiasi informazione relativa a una persona fisica identificata o identificabile."
+        },
+        {
+          "id": 6,
+          "title": "Servizio",
+          "content": "fa riferimento al Sito."
+        },
+        {
+          "id": 7,
+          "title": "Fornitore di servizi",
+          "content": "indica qualsiasi persona fisica o giuridica che tratta i dati per conto della Società. Si riferisce a società terze o persone alle dipendenze della Società per facilitare il Servizio, per fornire il Servizio per conto della Società, per eseguire servizi relativi al Servizio o per assistere la Società nell'analisi delle modalità di utilizzo del Servizio."
+        },
+        {
+          "id": 8,
+          "title": "Dati di utilizzo",
+          "content": "si riferisce ai dati raccolti automaticamente, generati dall'utilizzo del Servizio o dall'infrastruttura del Servizio stesso (ad esempio, la durata di una visita alla pagina)."
+        },
+        {
+          "id": 9,
+          "title": "Sito web ",
+          "content": "si riferisce a Optionsfy, accessibile da https://www.optionsfy.com/"
+        },
+        {
+          "id": 10,
+          "title": "Voi ",
+          "content": "indica la persona che accede o utilizza il Servizio, o la società o altra entità legale per conto della quale tale persona accede o utilizza il Servizio, a seconda dei casi."
+        }
+      ]
+    },
+    {
+      "sectionMainTitle": "Raccolta e utilizzo dei tuoi dati personali",
+      "sectionMainSubTitle": "Tipi di dati raccolti",
+      "sectionTitle": "Dati personali",
+      "sectionTextContent": "Durante l'utilizzo del nostro servizio, potremmo chiederti di fornirci alcune informazioni di identificazione personale che possono essere utilizzate per contattarti o identificarti. Le informazioni di identificazione personale possono includere, ma non sono limitate a:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": null,
+          "content": "Indirizzo e-mail"
+        },
+        {
+          "id": 1,
+          "title": null,
+          "content": "Nome e cognome"
+        },
+        {
+          "id": 2,
+          "title": null,
+          "content": "Numero di telefono"
+        },
+        {
+          "id": 3,
+          "title": null,
+          "content": "Dati di utilizzo"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Dati di utilizzo",
+      "sectionTextContent": "I Dati di utilizzo vengono raccolti automaticamente durante l'utilizzo del Servizio. I Dati di utilizzo possono includere informazioni come l'indirizzo del protocollo Internet del tuo dispositivo (ad es. indirizzo IP), il tipo di browser, la versione del browser, le pagine del nostro Servizio che visiti, l'ora e la data della tua visita, il tempo trascorso su tali pagine, dispositivo unico identificatori e altri dati diagnostici. Quando accedi al Servizio da o tramite un dispositivo mobile, potremmo raccogliere alcune informazioni automaticamente, inclusi, a titolo esemplificativo, il tipo di dispositivo mobile che utilizzi, l'ID univoco del tuo dispositivo mobile, l'indirizzo IP del tuo dispositivo mobile, sistema operativo, il tipo di browser Internet mobile utilizzato, gli identificatori univoci del dispositivo e altri dati diagnostici. Potremmo anche raccogliere informazioni che il tuo browser invia ogni volta che visiti il ​​nostro Servizio o quando accedi al Servizio da o tramite un dispositivo mobile."
+    },
+    {
+      "sectionTitle": "Tecnologie di tracciamento e cookie",
+      "sectionTextContent": "Utilizziamo cookie e tecnologie di tracciamento simili per tracciare l'attività sul nostro servizio e memorizzare determinate informazioni. Le tecnologie di tracciamento utilizzate sono beacon, tag e script per raccogliere e tenere traccia delle informazioni e per migliorare e analizzare il nostro servizio. Le tecnologie che utilizziamo possono includere:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": "Cookies o Browser Cookies.",
+          "content": "Un cookie è un piccolo file posizionato sul tuo dispositivo. Puoi indicare al tuo browser di rifiutare tutti i cookie o di indicare quando viene inviato un cookie. Tuttavia, se non accetti i cookie, potresti non essere in grado di utilizzare alcune parti del nostro servizio. A meno che tu non abbia regolato le impostazioni del tuo browser in modo che rifiuti i cookie, il nostro servizio potrebbe utilizzare i cookie."
+        },
+        {
+          "id": 1,
+          "title": "Flash Cookies.",
+          "content": "Alcune funzionalità del nostro Servizio possono utilizzare oggetti memorizzati in locale (o Flash Cookie) per raccogliere e memorizzare informazioni sulle tue preferenze o sulla tua attività sul nostro Servizio. I cookie flash non sono gestiti dalle stesse impostazioni del browser utilizzate per i cookie del browser. Per ulteriori informazioni su come eliminare i cookie Flash, leggere 'Dove posso modificare le impostazioni per la disabilitazione o l'eliminazione di oggetti condivisi locali?' disponibile su https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+        },
+        {
+          "id": 2,
+          "title": "Web Beacons.",
+          "content": " Alcune sezioni del nostro Servizio e delle nostre e-mail possono contenere piccoli file elettronici noti come web beacon (chiamati anche clear gif, pixel tag e single-pixel gif) che consentono alla Società, ad esempio, di contare gli utenti che hanno visitato quelle pagine o aperto un'e-mail e per altre statistiche del sito Web correlate (ad esempio, registrazione della popolarità di una determinata sezione e verifica dell'integrità del sistema e del server)."
+        }
+      ]
+    },
+    {
+      "sectionTextContent": "I cookie possono essere 'persistenti' o 'di sessione'. I cookie persistenti rimangono sul tuo personal computer o dispositivo mobile quando vai offline, mentre i cookie di sessione vengono eliminati non appena chiudi il tuo browser web. Puoi saperne di più sui cookie qui: Cookie di TermsFeed Generator. Utilizziamo sia cookie di sessione che cookie persistenti per gli scopi indicati di seguito:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": "Cookie necessari/essenziali",
+          "content": "Tipo: Cookie di sessione. Amministrato da: Noi. Scopo: questi cookie sono essenziali per fornirti i servizi disponibili attraverso il sito Web e per consentirti di utilizzare alcune delle sue funzionalità. Aiutano ad autenticare gli utenti e prevenire l'uso fraudolento degli account utente. Senza questi cookie, i servizi che hai richiesto non possono essere forniti e utilizziamo questi cookie solo per fornirti tali servizi."
+        },
+        {
+          "id": 1,
+          "title": "Cookie Policy/Accettazione Avviso Cookie",
+          "content": "Tipo: Cookie persistenti. Amministrato da: Noi. Scopo: questi cookie identificano se gli utenti hanno accettato l'uso dei cookie sul sito web."
+        },
+        {
+          "id": 2,
+          "title": "Cookie di funzionalità",
+          "content": "Tipo: Cookie persistenti. Amministrato da: Noi. Scopo: questi cookie ci consentono di ricordare le scelte che fai quando utilizzi il sito Web, come ricordare i tuoi dati di accesso o la preferenza della lingua. Lo scopo di questi cookie è quello di fornire all'utente un'esperienza più personale ed evitare di dover reinserire le proprie preferenze ogni volta che si utilizza il sito web."
+        }
+      ]
+    },
+    {
+      "sectionTextContent": "Per ulteriori informazioni sui cookie che utilizziamo e le tue scelte in merito ai cookie, visita la nostra Politica sui cookie o la sezione Cookie della nostra Politica sulla privacy."
+    },
+    {
+      "sectionTitle": "Utilizzo dei tuoi dati personali",
+      "sectionTextContent": "La Società può utilizzare i Dati Personali per le seguenti finalità:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": "Per fornire e mantenere il nostro Servizio",
+          "content": ", anche per monitorare l'utilizzo del nostro Servizio."
+        },
+        {
+          "id": 1,
+          "title": "Per gestire il tuo account:",
+          "content": "per gestire la tua registrazione come utente del Servizio. I Dati Personali che fornisci possono darti accesso a diverse funzionalità del Servizio che sono a tua disposizione come utente registrato."
+        },
+        {
+          "id": 2,
+          "title": "Per l'esecuzione di un contratto:",
+          "content": "lo sviluppo, la conformità e l'esecuzione del contratto di acquisto per i prodotti, articoli o servizi che hai acquistato o di qualsiasi altro contratto con Noi tramite il Servizio."
+        },
+        {
+          "id": 3,
+          "title": "Per contattarti:",
+          "content": "Per contattarti tramite e-mail, telefonate, SMS o altre forme equivalenti di comunicazione elettronica, come le notifiche push di un'applicazione mobile in merito ad aggiornamenti o comunicazioni informative relative alle funzionalità, ai prodotti o ai servizi appaltati, inclusi gli aggiornamenti di sicurezza, quando necessario o ragionevole per la loro attuazione."
+        },
+        {
+          "id": 4,
+          "title": "Per fornirti",
+          "content": " con notizie, offerte speciali e informazioni generali su altri beni, servizi ed eventi che offriamo simili a quelli che hai già acquistato o per i quali hai chiesto informazioni, a meno che tu non abbia scelto di non ricevere tali informazioni."
+        },
+        {
+          "id": 5,
+          "title": "To manage Your requests:",
+          "content": " To attend and manage Your requests to Us."
+        },
+        {
+          "id": 6,
+          "title": "For business transfers:",
+          "content": "We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred."
+        },
+        {
+          "id": 7,
+          "title": "For other purposes:",
+          "content": " We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience."
+        }
+      ]
+    },
+    {
+      "sectionTextContent": "We may share Your personal information in the following situations:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": "With Service Providers:",
+          "content": " We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You."
+        },
+        {
+          "id": 1,
+          "title": "For business transfers:",
+          "content": " We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company."
+        },
+        {
+          "id": 2,
+          "title": "With Affiliates:",
+          "content": "We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us."
+        },
+        {
+          "id": 3,
+          "title": "With business partners:",
+          "content": " We may share Your information with Our business partners to offer You certain products, services or promotions."
+        },
+        {
+          "id": 4,
+          "title": "With other users:",
+          "content": " when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside."
+        },
+        {
+          "id": 5,
+          "title": "With Your consent:",
+          "content": "We may disclose Your personal information for any other purpose with Your consent."
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Retention of Your Personal Data",
+      "sectionTextContent": "The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods."
+    },
+    {
+      "sectionTitle": "Transfer of Your Personal Data",
+      "sectionTextContent": "Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information."
+    },
+    {
+      "sectionMainSubTitle": "Disclosure of Your Personal Data",
+      "sectionTitle": "Business Transactions",
+      "sectionTextContent": "If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy."
+    },
+    {
+      "sectionTitle": "Law enforcement",
+      "sectionTextContent": "Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency)."
+    },
+    {
+      "sectionTitle": "Other legal requirements",
+      "sectionTextContent": "The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": null,
+          "content": "Comply with a legal obligation"
+        },
+        {
+          "id": 1,
+          "title": null,
+          "content": "Protect and defend the rights or property of the Company"
+        },
+        {
+          "id": 2,
+          "title": null,
+          "content": "Protect and defend the rights or property of the Company"
+        },
+        {
+          "id": 3,
+          "title": null,
+          "content": "Prevent or investigate possible wrongdoing in connection with the Service"
+        },
+        {
+          "id": 4,
+          "title": null,
+          "content": "Protect the personal safety of Users of the Service or the public"
+        },
+        {
+          "id": 5,
+          "title": null,
+          "content": "Protect against legal liability"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Security of Your Personal Data",
+      "sectionTextContent": "The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security."
+    },
+    {
+      "sectionMainTitle": "Children's Privacy",
+      "sectionTextContent": "Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information."
+    },
+    {
+      "sectionMainTitle": "Links to Other Websites",
+      "sectionTextContent": "Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services."
+    },
+    {
+      "sectionMainTitle": "Changes to this Privacy Policy",
+      "sectionTextContent": "We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the 'Last updated' date at the top of this Privacy Policy.You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+    },
+    {
+      "sectionMainTitle": "Contact Us",
+      "sectionTextContent": "If you have any questions about this Privacy Policy, You can contact us:",
+      "listTextItems": [
+        {
+          "id": 0,
+          "title": null,
+          "content": "By email: support@optionsfy.com"
+        }
+      ]
+    }
+  ]
+}

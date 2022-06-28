@@ -1,5 +1,5 @@
 import MyCard from "../Components/MyCard";
-import dataJson from "../Locale/homeCardContent.json";
+import dataJson from "../locales/homeCardContent.json";
 import { Hero } from "../Components/Hero";
 import { CardsSection } from "../Components/CardsSection";
 
@@ -26,7 +26,7 @@ const HomePage = () => {
           </div>
         ))}
       </section>
-      <section id='pricing'>
+      <section id="pricing">
         <CardsSection />
       </section>
     </div>
