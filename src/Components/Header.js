@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Dropdown } from "react-bootstrap";
 import { useState } from "react";
 import ModalComponent from "./ModalComponent";
 import logo from "../assets/logoFooter.png";
@@ -7,16 +7,18 @@ import burgerIcon from "../assets/burgerIcon.png";
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = ({ user, login }) => {
   const [modalShow, setModalShow] = useState(false);
   const [tabFocus, setTabFocus] = useState("");
+  const [language, setLanguage] = useState("en");
 
   const onHide = () => setModalShow(false);
 
   const navigate = useNavigate();
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <Navbar className="heroGradient" expand="md">
@@ -97,6 +99,7 @@ const Header = ({ user, login }) => {
                 {t("header.navbar.logout")}
               </Nav.Link>
             )}
+            <LanguageSelector />
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,4 +1,11 @@
 {
+  "language": {
+    "english": "INGLÉS",
+    "spanish": "ESPAÑOL",
+    "german": "ALEMÁN",
+    "french": "FRANCÉS",
+    "italian": "ITALIANO"
+  },
   "header": {
     "navbar": {
       "pricing": "Precios",

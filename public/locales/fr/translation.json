@@ -1,4 +1,11 @@
 {
+  "language": {
+    "english": "ANGLAIS",
+    "spanish": "ESPAGNOL",
+    "german": "ALLEMAND",
+    "french": "FRANÇAIS",
+    "italian": "ITALIEN"
+  },
   "header": {
     "navbar": {
       "pricing": "Tarification",

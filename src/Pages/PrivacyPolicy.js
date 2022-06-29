@@ -5,8 +5,8 @@ export function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
-    <div className="container py-5" id='#'>
-      {t("privacyPolicy", { returnObjects: true }).map((item,index) => {
+    <div className="container py-5">
+      {t("privacyPolicy", { returnObjects: true }).map((item, index) => {
         return (
           <div key={index}>
             {item.pageTitle && <h1>{item.pageTitle}</h1>}

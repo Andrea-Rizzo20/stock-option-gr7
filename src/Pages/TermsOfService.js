@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 export function TermsOfService() {
   const { t } = useTranslation();
   return (
-    <div className="container py-5" id="#">
-      {t("termsOfService", { returnObjects: true }).map((item,index) => {
+    <div className="container py-5">
+      {t("termsOfService", { returnObjects: true }).map((item, index) => {
         return (
           <div key={index}>
             {item.pageTitle && <h1>{item.pageTitle}</h1>}
