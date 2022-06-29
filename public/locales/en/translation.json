@@ -31,6 +31,14 @@
       "signUp": "Sign Up"
     }
   },
+  "contactUs": {
+    "title": "Contact Us",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "message": "Message",
+    "close": "Close"
+  },
   "homepage": {
     "hero": {
       "title": "THE ONLY DONE FOR YOU OPTION PICKER",

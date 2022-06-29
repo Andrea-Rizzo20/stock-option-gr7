@@ -11,10 +11,16 @@ import { useEffect, useState } from "react";
 import { PrivacyPolicy } from "./Pages/PrivacyPolicy";
 import { Disclaimer } from "./Pages/Disclaimer";
 import { TermsOfService } from "./Pages/TermsOfService";
+import ContactUsModal from "./Components/ContactUsModal";
+import {Button} from 'react-bootstrap'
+import { t } from "i18next";
+
 
 const App = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [login, setLogin] = useState(false);
+  const [contactModalShow, setContactModalShow] = useState(false);
+
 
   const userSetting = (par) => setLogin(par);
 
@@ -45,6 +51,13 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <Button  className="contactUsButton" onClick={() => setContactModalShow(true)}>
+          {t("contactUs.title")}
+        </Button>
+        <ContactUsModal
+          show={contactModalShow}
+          onHide={() => setContactModalShow(false)}
+        />
     </>
   );
 };

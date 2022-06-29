@@ -5,10 +5,10 @@ export function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
-    <div className="container py-5">
-      {t("privacyPolicy", { returnObjects: true }).map((item) => {
+    <div className="container py-5" id='#'>
+      {t("privacyPolicy", { returnObjects: true }).map((item,index) => {
         return (
-          <>
+          <div key={index}>
             {item.pageTitle && <h1>{item.pageTitle}</h1>}
             {item.pageSubtitle && <p>{item.pageSubtitle}</p>}
             {item.sectionMainTitle && <h2>{item.sectionMainTitle}</h2>}
@@ -27,7 +27,7 @@ export function PrivacyPolicy() {
                 })}
               </ul>
             )}
-          </>
+          </div>
         );
       })}
       <GoToTop />

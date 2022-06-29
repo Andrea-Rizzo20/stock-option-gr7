@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import logo from "../assets/logoFooter.png";
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
           <ul className="col-10 mx-auto text-center text-md-end col-md-6 text-white list-unstyled">
             <li>
               <Link
-                to="terms-of-service"
+                to="terms-of-service##"
                 className="text-white text-decoration-none"
               >
                 {t("footer.termOfService")}
@@ -30,14 +30,14 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="privacy-policy"
+                to="privacy-policy##"
                 className="text-white text-decoration-none"
               >
                 {t("footer.privacyPolicy")}
               </Link>
             </li>
             <li>
-              <Link to="disclaimer" className="text-white text-decoration-none">
+              <Link to="disclaimer##" className="text-white text-decoration-none">
                 {t("footer.disclaimer")}
               </Link>
             </li>
