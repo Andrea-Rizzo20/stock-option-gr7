@@ -77,7 +77,13 @@ background-color: #364261;
     color: #AEBFC5;
 }
 
-
+.languageToggle:active, .languageToggle:focus, .languageToggle:hover, .languageToggle:checked{
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: 0 !important;
+}
 .formButton {
     border: 1px solid white;
     color: white;

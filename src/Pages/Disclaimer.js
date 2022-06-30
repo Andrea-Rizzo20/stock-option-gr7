@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export function Disclaimer() {
+function Disclaimer() {
   const { t } = useTranslation();
 
   return (
@@ -24,3 +24,5 @@ export function Disclaimer() {
     </div>
   );
 }
+
+export default Disclaimer;

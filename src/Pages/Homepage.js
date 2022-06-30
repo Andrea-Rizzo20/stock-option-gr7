@@ -1,6 +1,6 @@
-import CardComponent from "../Components/CardComponent";
-import { Hero } from "../Components/Hero";
-import { OfferSection } from "../Components/OfferSection";
+import CardComponent from "../components/CardComponent";
+import { Hero } from "../components/Hero";
+import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
 
 const HomePage = () => {

@@ -1,19 +1,19 @@
-import Header from "./Components/Header";
-import "bootstrap/dist/css/bootstrap.min.css";
-import HomePage from "./Pages/Homepage";
-import Footer from "./Components/Footer";
-import "./index.css";
 import { Route, Routes } from "react-router-dom";
-import { NotFound } from "./Pages/NotFound";
-import { Protected } from "./Components/Protected";
-import { Dashboard } from "./Pages/Dashboard";
 import { useEffect, useState } from "react";
-import { PrivacyPolicy } from "./Pages/PrivacyPolicy";
-import { Disclaimer } from "./Pages/Disclaimer";
-import { TermsOfService } from "./Pages/TermsOfService";
-import ContactUsModal from "./Components/ContactUsModal";
+import { useTranslation } from "react-i18next";
+import Header from "./components/Header";
+import HomePage from "./pages/Homepage";
+import Footer from "./components/Footer";
+import Protected from "./components/Protected";
+import Dashboard from "./pages/Dashboard";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
+import TermsOfService from "./pages/TermsOfService";
+import NotFound from "./pages/NotFound";
+import ContactUsModal from "./components/ContactUsModal";
 import { Button } from "react-bootstrap";
-import { t } from "i18next";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 const App = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -21,6 +21,7 @@ const App = () => {
   const [contactModalShow, setContactModalShow] = useState(false);
 
   const userSetting = (par) => setLogin(par);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const userJoin = JSON.parse(localStorage.getItem("user"));

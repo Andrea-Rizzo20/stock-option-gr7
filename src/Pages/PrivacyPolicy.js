@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
-import GoToTop from "../Components/GoToTop";
 
-export function PrivacyPolicy() {
+function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
@@ -30,7 +29,8 @@ export function PrivacyPolicy() {
           </div>
         );
       })}
-      <GoToTop />
     </div>
   );
 }
+
+export default PrivacyPolicy;

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export function Dashboard({ user }) {
+function Dashboard({ user }) {
   const { t } = useTranslation();
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
@@ -18,3 +18,5 @@ export function Dashboard({ user }) {
     </div>
   );
 }
+
+export default Dashboard;

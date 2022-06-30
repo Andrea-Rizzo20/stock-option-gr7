@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export function TermsOfService() {
+function TermsOfService() {
   const { t } = useTranslation();
   return (
     <div className="container py-5">
@@ -26,3 +26,5 @@ export function TermsOfService() {
     </div>
   );
 }
+
+export default TermsOfService;

@@ -13,13 +13,15 @@ const LanguageSelector = () => {
   };
   return (
     <Dropdown>
-      <Dropdown.Toggle
-        className="bg-transparent border-0"
-        variant="success"
-        id="dropdown-basic"
-      >
-        <Globe />
-      </Dropdown.Toggle>
+      <div className="d-flex justify-content-end">
+        <Dropdown.Toggle
+          className="bg-transparent d-flex languageToggle  align-items-center border-0 border-0:active"
+          variant="success"
+          id="dropdown-basic"
+        >
+          <Globe />
+        </Dropdown.Toggle>
+      </div>
       <Dropdown.Menu>
         <Dropdown.Item value="en" onClick={languageHandle}>
           {t("language.english")}

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import notFoundPic from "../assets/notFound.gif";
 
-export function NotFound() {
+function NotFound() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -23,3 +23,5 @@ export function NotFound() {
     </div>
   );
 }
+
+export default NotFound;
