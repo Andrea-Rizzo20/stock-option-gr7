@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Pic1 from "../assets/pic-1.png";
 import { useTranslation } from "react-i18next";
+import createSendinblueAccount from "../createSendinblueAccount";
 
 export const Hero = () => {
+  const [mail, setMail] = useState("");
   const { t } = useTranslation();
+
+  const handleInput = (event) => {
+    setMail(event.target.value);
+  };
+
+  const submitEmail = (event) => {
+    event.preventDefault();
+    createSendinblueAccount([2], mail);
+    setMail("");
+  };
+
   return (
     <div className="heroGradient text-white w-100">
       <div className="row flex-column-reverse flex-md-row justify-content-around p-3 p-md-5 mx-0">
@@ -23,18 +36,19 @@ export const Hero = () => {
 
       <div className="text-center">
         <p className="fw-bold fst-italic">{t("homepage.hero.registration")}</p>
-        <form
-          action="#"
-          className="d-flex flex-column justify-content-center align-items-center "
-        >
+        <form className="d-flex flex-column justify-content-center align-items-center ">
           <input
             type="text"
+            name="email"
+            value={mail}
+            onChange={handleInput}
             placeholder="Email"
             className="mb-2 bg-transparent border border-white text-white text-center"
           />
           <button
             type="submit"
             className="fw-bold heroBGButton text-white mb-4 border border-white px-3"
+            onClick={submitEmail}
           >
             {t("homepage.hero.getStarted")}
           </button>

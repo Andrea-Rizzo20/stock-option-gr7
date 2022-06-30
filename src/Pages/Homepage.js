@@ -5,6 +5,31 @@ import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const { t } = useTranslation();
+
+  // const options = {
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //     "api-key":
+  //       "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",
+  //   },
+  //   body: JSON.stringify({
+  //     email: "r.andrea2093@gmail.com",
+  //     //   attributes: {FNAME: 'Elly', LNAME: 'Roger'},
+  //     //   emailBlacklisted: false,
+  //     //   smsBlacklisted: false,
+  //     listIds: [2],
+  //     updateEnabled: false,
+  //     //   smtpBlacklistSender: ['user@example.com']
+  //   }),
+  // };
+
+  // fetch("https://api.sendinblue.com/v3/contacts", options)
+  //   .then((response) => response.json())
+  //   .then((response) => console.log(response))
+  //   .catch((err) => console.error(err));
+
   return (
     <div>
       <Hero />
