@@ -1,7 +1,18 @@
+
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+
 
 function Disclaimer() {
   const { t } = useTranslation();
+
+  useEffect(()=>{
+    document.title = 'Disclaimer | Optionsfy';
+  },[])
+
+
+
+
 
   return (
     <div className="container py-5">

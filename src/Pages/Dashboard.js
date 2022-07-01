@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function Dashboard({ user }) {
   const { t } = useTranslation();
+
+  useEffect(()=>{
+    document.title = 'Dashboard | Optionsfy';
+  },[])
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
       <h1>
