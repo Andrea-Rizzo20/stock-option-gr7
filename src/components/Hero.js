@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Pic1 from "../assets/pic-1.png";
 import { useTranslation } from "react-i18next";
-import createSendinblueAccount from "../createSendinblueAccount";
+import createSendinblueAccount from "../utils/createSendinblueAccount";
 
 export const Hero = () => {
   const [mail, setMail] = useState("");

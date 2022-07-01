@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import contactUsGif from "../assets/contactUs.gif";
-import createSendinblueAccount from "../createSendinblueAccount";
+import createSendinblueAccount from "../utils/createSendinblueAccount";
 
 function ContactUsModal(props) {
   const { t } = useTranslation();

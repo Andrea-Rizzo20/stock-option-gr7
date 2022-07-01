@@ -7,7 +7,6 @@ const LanguageSelector = () => {
 
   const languageHandle = (event) => {
     const lang = event.target.attributes.value.nodeValue;
-    console.log(lang);
 
     i18n.changeLanguage(lang);
   };
