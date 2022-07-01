@@ -77,7 +77,13 @@ background-color: #364261;
     color: #AEBFC5;
 }
 
-
+.languageToggle:active, .languageToggle:focus, .languageToggle:hover, .languageToggle:checked{
+    box-shadow: none !important;
+    border: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: 0 !important;
+}
 .formButton {
     border: 1px solid white;
     color: white;
@@ -154,4 +160,33 @@ button:hover {
  margin-left: 0 !important;
  margin-right: 0 !important;
 
+}
+
+.contactUsButton{
+    background-color: rgba(101, 132, 140, 1);
+    border: 1px solid white;
+    position: fixed;
+    right: 2vw;
+    bottom: 1.5vw;
+
+}
+
+.contactUsButton:hover{
+    background-color: rgba(101, 132, 140, 1);
+    border-color: white;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.contactUsButton:focus{
+    background-color: rgba(101, 132, 140, 1);
+    box-shadow: none;
+    border-color: white;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }

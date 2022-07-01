@@ -1,14 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-const LoginForm = ({showModal,login}) => {
+const LoginForm = ({ showModal, login }) => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
 
-
-
-
+  const { t } = useTranslation();
 
   const inputHandle = (event) => {
     const { name, value } = event.target;
@@ -25,21 +24,17 @@ const LoginForm = ({showModal,login}) => {
     const database = JSON.parse(localStorage.getItem("database"));
     if (data.email === database.email && data.password === database.password) {
       localStorage.setItem("user", JSON.stringify(database));
-      showModal()
-      login()
-    }else{
-      alert('Email o Password non corretti, riprova')
+      showModal();
+      login();
+    } else {
+      alert(t("header.loginForm.alert"));
     }
 
     setData({
       email: "",
       password: "",
-    })
-
-
-
+    });
   };
-
 
   return (
     <form
@@ -49,7 +44,7 @@ const LoginForm = ({showModal,login}) => {
       <div className="d-flex flex-column align-items-center gap-3 pt-3">
         <input
           type="email"
-          placeholder="Email"
+          placeholder={t("header.loginForm.email")}
           name="email"
           className="inputForm text-center"
           value={data.email}
@@ -57,7 +52,7 @@ const LoginForm = ({showModal,login}) => {
         ></input>
         <input
           type="password"
-          placeholder="Password"
+          placeholder={t("header.loginForm.password")}
           name="password"
           className="inputForm text-center"
           value={data.password}
@@ -66,9 +61,8 @@ const LoginForm = ({showModal,login}) => {
       </div>
       <div className="d-flex flex-column align-items-center gap-4 pb-3">
         <button type="submit" className="formButton heroBGButton">
-          Login
+          {t("header.loginForm.login")}
         </button>
-        <button type="button" className="formButton heroBGButton" onClick={showModal}>Forgot Password</button>
       </div>
     </form>
   );
