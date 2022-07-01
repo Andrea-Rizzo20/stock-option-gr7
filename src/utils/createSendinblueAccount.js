@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 function createSendinblueAccount(
   listId,
   email = "",
@@ -28,7 +30,7 @@ function createSendinblueAccount(
 
   fetch("https://api.sendinblue.com/v3/contacts", options)
     .then((response) => response.json())
-    .then((response) => console.log(response))
+    .then((response) => {if(response.message ==="Contact already exist"){return alert(i18next.t("fetchAlert"))}})
     .catch((err) => console.error(err));
 }
 export default createSendinblueAccount;
