@@ -1,7 +1,7 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { useState } from "react";
 import ModalComponent from "./ModalComponent";
-import logo from "../assets/logoFooter.png";
+import logo from "../assets/logo.png";
 import logoMobile from "../assets/logoMobile.png";
 import burgerIcon from "../assets/burgerIcon.png";
 import { useNavigate } from "react-router-dom";

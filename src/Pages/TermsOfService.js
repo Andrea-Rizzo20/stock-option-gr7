@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function TermsOfService() {
   const { t } = useTranslation();
+
+  useEffect(()=>{
+    document.title = 'Terms of Service | Optionsfy';
+  },[])
+
   return (
     <div className="container py-5">
       {t("termsOfService", { returnObjects: true }).map((item, index) => {

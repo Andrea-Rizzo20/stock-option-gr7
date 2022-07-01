@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function PrivacyPolicy() {
   const { t } = useTranslation();
+
+  useEffect(()=>{
+    document.title = 'Privacy policy | Optionsfy';
+  },[])
 
   return (
     <div className="container py-5">

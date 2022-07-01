@@ -2,10 +2,14 @@ import CardComponent from "../components/CardComponent";
 import { Hero } from "../components/Hero";
 import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const HomePage = () => {
   const { t } = useTranslation();
 
+  useEffect(()=>{
+    document.title = 'Homepage | Optionsfy';
+  },[])
 
   return (
     <div>
