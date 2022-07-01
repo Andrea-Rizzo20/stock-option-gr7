@@ -97,10 +97,10 @@ const Header = ({ user, login }) => {
                 {t("header.navbar.logout")}
               </Nav.Link>
             )}
-            <LanguageSelector />
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <LanguageSelector />
       <ModalComponent
         renderKey={tabFocus}
         show={modalShow}

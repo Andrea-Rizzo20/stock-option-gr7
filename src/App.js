@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import GoToTop from "./components/GoToTop";
 import Header from "./components/Header";
 import HomePage from "./pages/Homepage";
 import Footer from "./components/Footer";
@@ -37,6 +38,7 @@ const App = () => {
     <>
       <Header user={user} login={userSetting} />
 
+      <GoToTop />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="home" index element={<HomePage />} />
