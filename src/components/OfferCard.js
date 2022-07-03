@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { CheckIcon } from "../utils/CheckIcon";
 import ModalComponent from "./ModalComponent";
 import { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
 
 export function OfferCard({ specialoffer, login }) {
 	const { t } = useTranslation();

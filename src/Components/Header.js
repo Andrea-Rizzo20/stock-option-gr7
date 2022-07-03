@@ -98,9 +98,9 @@ const Header = ({ user, login }) => {
 							</Nav.Link>
 						)}
 					</Nav>
+					<LanguageSelector />
 				</Navbar.Collapse>
 			</Container>
-			<LanguageSelector />
 			<ModalComponent
 				renderKey={tabFocus}
 				show={modalShow}

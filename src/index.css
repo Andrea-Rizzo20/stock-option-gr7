@@ -9,6 +9,18 @@
 }
 
 /* LORENZO */
+
+
+@media screen and (max-width: 767px){
+    .languagedropdownaligner {
+        position: relative;
+        text-align: right;
+        left:auto;
+        right: 0;
+    };
+    
+}
+
 .cardborders {
     border-radius: 20px;
 }
