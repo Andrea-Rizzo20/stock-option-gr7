@@ -40,47 +40,41 @@ export function OfferCard({ specialoffer, login }) {
 			{specialoffer ? (
 				<ul className="px-2 px-md-5 list-unstyled pt-3">
 					<li className="py-1">
-						<CheckIcon color="#947932" />
-						{t("homepage.offerCard.dailyOption")}
+						<CheckIcon color="#947932" /> {t("homepage.offerCard.dailyOption")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#947932" />
+						<CheckIcon color="#947932" />{" "}
 						{t("homepage.offerCard.suggestedStrike")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#947932" />
+						<CheckIcon color="#947932" />{" "}
 						{t("homepage.offerCard.optionStrategies")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#947932" />
-						{t("homepage.offerCard.betterOption")}
+						<CheckIcon color="#947932" /> {t("homepage.offerCard.betterOption")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#947932" />
-						{t("homepage.offerCard.indicators")}
+						<CheckIcon color="#947932" /> {t("homepage.offerCard.indicators")}
 					</li>
 				</ul>
 			) : (
 				<ul className="px-2 px-md-5 list-unstyled">
 					<li className="py-1">
-						<CheckIcon color="#364261" />
-						{t("homepage.offerCard.dailyOption")}
+						<CheckIcon color="#364261" /> {t("homepage.offerCard.dailyOption")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#364261" />
+						<CheckIcon color="#364261" />{" "}
 						{t("homepage.offerCard.suggestedStrike")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#364261" />
+						<CheckIcon color="#364261" />{" "}
 						{t("homepage.offerCard.optionStrategies")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#364261" />
-						{t("homepage.offerCard.betterOption")}
+						<CheckIcon color="#364261" /> {t("homepage.offerCard.betterOption")}
 					</li>
 					<li className="py-1">
-						<CheckIcon color="#364261" />
-						{t("homepage.offerCard.indicators")}
+						<CheckIcon color="#364261" /> {t("homepage.offerCard.indicators")}
 					</li>
 				</ul>
 			)}
