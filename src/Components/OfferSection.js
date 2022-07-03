@@ -1,7 +1,7 @@
 import React from "react";
 import { OfferCard } from "./OfferCard";
 
-export function OfferSection(login) {
+export function OfferSection({ login }) {
 	return (
 		<section className="footer-cards-gradient">
 			<div className="row">

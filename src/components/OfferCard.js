@@ -2,13 +2,20 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { CheckIcon } from "../utils/CheckIcon";
 import ModalComponent from "./ModalComponent";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 
 export function OfferCard({ specialoffer, login }) {
 	const { t } = useTranslation();
+	const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 	const [modalShow, setModalShow] = useState(false);
 	const [tabFocus, setTabFocus] = useState("");
 	const onHide = () => setModalShow(false);
+
+	useEffect(() => {
+		const userJoin = JSON.parse(localStorage.getItem("user"));
+		setUser(userJoin);
+	}, [login]);
 
 	return (
 		<div className="bg-white border cardborders w-100 my-5 d-flex flex-column justify-content-evenly">
@@ -18,7 +25,17 @@ export function OfferCard({ specialoffer, login }) {
 				) : (
 					<h3>{t("homepage.offerCard.monthSubscribe")}</h3>
 				)}
-				{specialoffer ? <h4>{t("homepage.offerCard.saveMoney")}</h4> : null}
+				{specialoffer ? (
+					<h4>{t("homepage.offerCard.saveMoney")}</h4>
+				) : (
+					<h4
+						style={{
+							color: "white",
+						}}
+					>
+						invisibile
+					</h4>
+				)}
 			</div>
 
 			{specialoffer ? (
@@ -72,8 +89,12 @@ export function OfferCard({ specialoffer, login }) {
 				<div className="d-flex justify-content-center py-3">
 					<button
 						type="submit"
+						style={{
+							display: user ? "none" : "block",
+						}}
 						className="offerButton2"
 						onClick={() => {
+							window.scrollTo(0, 0);
 							setTabFocus("signup");
 							setModalShow(true);
 						}}
@@ -85,8 +106,12 @@ export function OfferCard({ specialoffer, login }) {
 				<div className="d-flex justify-content-center py-3">
 					<button
 						type="submit"
+						style={{
+							display: user ? "none" : "block",
+						}}
 						className="offerButton1"
 						onClick={() => {
+							window.scrollTo(0, 0);
 							setTabFocus("signup");
 							setModalShow(true);
 						}}

@@ -4,7 +4,7 @@ import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
-const HomePage = (login) => {
+const HomePage = ({ login }) => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
