@@ -9,7 +9,10 @@
 }
 
 /* LORENZO */
-
+.languagedropdownaligner {
+    max-width: 10rem;
+    min-width: 0;
+}
 
 @media screen and (max-width: 767px){
     .languagedropdownaligner {
@@ -17,6 +20,8 @@
         text-align: right;
         left:auto;
         right: 0;
+        max-width: none;
+        min-width:10rem;
     };
     
 }
