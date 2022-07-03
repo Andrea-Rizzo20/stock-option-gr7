@@ -24,17 +24,7 @@ export function OfferCard({ specialoffer, login }) {
 				) : (
 					<h3>{t("homepage.offerCard.monthSubscribe")}</h3>
 				)}
-				{specialoffer ? (
-					<h4>{t("homepage.offerCard.saveMoney")}</h4>
-				) : (
-					<h4
-						style={{
-							color: "white",
-						}}
-					>
-						invisibile
-					</h4>
-				)}
+				{specialoffer ? <h4>{t("homepage.offerCard.saveMoney")}</h4> : null}
 			</div>
 
 			{specialoffer ? (
@@ -58,7 +48,7 @@ export function OfferCard({ specialoffer, login }) {
 					</li>
 				</ul>
 			) : (
-				<ul className="px-2 px-md-5 list-unstyled">
+				<ul className="px-2 mx-2 px-md-5 list-unstyled">
 					<li className="py-1">
 						<CheckIcon color="#364261" /> {t("homepage.offerCard.dailyOption")}
 					</li>
