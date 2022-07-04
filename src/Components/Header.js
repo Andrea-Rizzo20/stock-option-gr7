@@ -51,9 +51,15 @@ const Header = ({ user, login }) => {
 						>
 							{t("header.navbar.features")}
 						</HashLink>
-						<Navbar.Brand className="w-25 py-0" onClick={() => navigate("/")}>
+						<Navbar.Brand
+							className="w-25 py-0 cursor"
+							onClick={() => navigate("/")}
+						>
 							<img
 								src={logo}
+								style={{
+									cursor: "pointer",
+								}}
 								className="w-100 mx-0 d-none d-md-flex"
 								alt="Optionsfy Logo"
 							/>
