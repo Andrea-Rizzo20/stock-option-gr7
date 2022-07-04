@@ -17,53 +17,53 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
 const App = () => {
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
-  const [login, setLogin] = useState(false);
-  const [contactModalShow, setContactModalShow] = useState(false);
+	const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+	const [login, setLogin] = useState(false);
+	const [contactModalShow, setContactModalShow] = useState(false);
 
-  const userSetting = (par) => setLogin(par);
-  const { t } = useTranslation();
+	const userSetting = (par) => setLogin(par);
+	const { t } = useTranslation();
 
-  useEffect(() => {
-    const userJoin = JSON.parse(localStorage.getItem("user"));
-    if (userJoin) {
-      setUser(userJoin);
-      setLogin(true);
-    } else {
-      setUser(userJoin);
-    }
-  }, [login]);
+	useEffect(() => {
+		const userJoin = JSON.parse(localStorage.getItem("user"));
+		if (userJoin) {
+			setUser(userJoin);
+			setLogin(true);
+		} else {
+			setUser(userJoin);
+		}
+	}, [login]);
 
-  return (
-    <>
-      <Header user={user} login={userSetting} />
+	return (
+		<>
+			<Header user={user} login={userSetting} />
 
-      <GoToTop />
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="home" index element={<HomePage />} />
-        <Route element={<Protected user={user} />}>
-          <Route path="dashboard" element={<Dashboard user={user} />} />
-        </Route>
-        <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="disclaimer" element={<Disclaimer />} />
-        <Route path="terms-of-service" element={<TermsOfService />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+			<GoToTop />
+			<Routes>
+				<Route index element={<HomePage login={userSetting} />} />
+				<Route path="home" index element={<HomePage login={userSetting} />} />
+				<Route element={<Protected user={user} />}>
+					<Route path="dashboard" element={<Dashboard user={user} />} />
+				</Route>
+				<Route path="privacy-policy" element={<PrivacyPolicy />} />
+				<Route path="disclaimer" element={<Disclaimer />} />
+				<Route path="terms-of-service" element={<TermsOfService />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
 
-      <Footer />
-      <Button
-        className="contactUsButton"
-        onClick={() => setContactModalShow(true)}
-      >
-        {t("contactUs.title")}
-      </Button>
-      <ContactUsModal
-        show={contactModalShow}
-        onHide={() => setContactModalShow(false)}
-      />
-    </>
-  );
+			<Footer />
+			<Button
+				className="contactUsButton"
+				onClick={() => setContactModalShow(true)}
+			>
+				{t("contactUs.title")}
+			</Button>
+			<ContactUsModal
+				show={contactModalShow}
+				onHide={() => setContactModalShow(false)}
+			/>
+		</>
+	);
 };
 
 export default App;
