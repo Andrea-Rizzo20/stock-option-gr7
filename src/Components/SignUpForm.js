@@ -62,6 +62,7 @@ const SignUpForm = ({ showModal }) => {
 		>
 			<input
 				type="text"
+				pattern="[A-Za-z]{1,32}"
 				name="firstName"
 				required
 				value={data.firstName}
@@ -71,6 +72,7 @@ const SignUpForm = ({ showModal }) => {
 			></input>
 			<input
 				type="text"
+				pattern="[A-Za-z]{1,32}"
 				name="lastName"
 				required
 				value={data.lastName}
@@ -107,6 +109,7 @@ const SignUpForm = ({ showModal }) => {
 			></input>
 			<input
 				type="tel"
+				pattern="[0-9]{10}"
 				name="phone"
 				required
 				value={data.phone}
