@@ -1,6 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { useState } from "react";
-import ModalComponent from "./ModalComponent";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import logoMobile from "../assets/logoMobile.png";
 import burgerIcon from "../assets/burgerIcon.png";
@@ -10,13 +9,35 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 
 const Header = ({ user, login }) => {
-  const [modalShow, setModalShow] = useState(false);
-  const [tabFocus, setTabFocus] = useState("");
-  const onHide = () => setModalShow(false);
 
   const navigate = useNavigate();
 
   const { t } = useTranslation();
+
+  const logoutHandle = () =>{
+    login(false);
+    localStorage.removeItem("user");
+  }
+
+  const loggedMenu = [
+    {title:t("header.navbar.dashboard"), active: ()=>navigate("dashboard")},
+    {title:t("header.navbar.logout"), active:logoutHandle}
+  ]
+  const notLoggedMenu = [
+    {title:t("header.navbar.login"),active: ()=>navigate("login")},
+    {title:t("header.navbar.signUp"), active: ()=>navigate("signup")}
+  ]
+
+  const [menu, setMenu] = useState(notLoggedMenu)
+
+  useEffect(()=>{
+    if(user){
+      setMenu(loggedMenu)
+    }else{
+      setMenu(notLoggedMenu)
+    }
+  },[user,loggedMenu,notLoggedMenu])
+
 
   return (
     <Navbar className="heroGradient" expand="md">
@@ -58,55 +79,19 @@ const Header = ({ user, login }) => {
                 alt="Optionsfy Logo"
               />
             </Navbar.Brand>
-            {!user ? (
+            {menu.map((item,index) =>(
               <Nav.Link
                 className="text-white"
-                onClick={() => {
-                  setTabFocus("login");
-                  setModalShow(true);
-                }}
+                key={index}
+                onClick={item.active}
               >
-                {t("header.navbar.login")}
-              </Nav.Link>
-            ) : (
-              <Nav.Link
-                className="text-white"
-                onClick={() => navigate("dashboard")}
-              >
-                {t("header.navbar.dashboard")}
-              </Nav.Link>
-            )}
-            {!user ? (
-              <Nav.Link
-                className="text-white"
-                onClick={() => {
-                  setTabFocus("signup");
-                  setModalShow(true);
-                }}
-              >
-                {t("header.navbar.signUp")}
-              </Nav.Link>
-            ) : (
-              <Nav.Link
-                className="text-white"
-                onClick={() => {
-                  login(false);
-                  localStorage.removeItem("user");
-                }}
-              >
-                {t("header.navbar.logout")}
-              </Nav.Link>
-            )}
+                {item.title}
+              </Nav.Link>))}
+
           </Nav>
         </Navbar.Collapse>
-      </Container>
       <LanguageSelector />
-      <ModalComponent
-        renderKey={tabFocus}
-        show={modalShow}
-        onHide={onHide}
-        login={login}
-      />
+      </Container>
     </Navbar>
   );
 };

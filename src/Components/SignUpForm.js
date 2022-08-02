@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const SignUpForm = ({ showModal }) => {
+
+const SignUpForm = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     firstName: "",
@@ -48,7 +51,7 @@ const SignUpForm = ({ showModal }) => {
         confPassword: "",
         contract: false,
       });
-      showModal();
+      navigate('/');
     }
     if (localStorage.getItem("database")) {
       alert(t("header.signUpForm.alert"));

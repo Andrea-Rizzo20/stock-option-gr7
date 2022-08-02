@@ -3,6 +3,8 @@ import { Hero } from "../components/Hero";
 import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
+
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -13,6 +15,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <Outlet/>
       <Hero />
       <section className="fluid-container" id="features">
         {t("homepage.cardComponent", { returnObjects: true }).map(

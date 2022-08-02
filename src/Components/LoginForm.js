@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const LoginForm = ({ showModal, login }) => {
+const LoginForm = ({ login }) => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const inputHandle = (event) => {
@@ -24,8 +25,8 @@ const LoginForm = ({ showModal, login }) => {
     const database = JSON.parse(localStorage.getItem("database"));
     if (data.email === database.email && data.password === database.password) {
       localStorage.setItem("user", JSON.stringify(database));
-      showModal();
       login();
+      navigate('/');
     } else {
       alert(t("header.loginForm.alert"));
     }
