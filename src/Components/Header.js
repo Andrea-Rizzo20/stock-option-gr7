@@ -18,25 +18,24 @@ const Header = ({ user, login }) => {
     login(false);
     localStorage.removeItem("user");
   }
+  const [menu, setMenu] = useState([])
 
-  const loggedMenu = [
-    {title:t("header.navbar.dashboard"), active: ()=>navigate("dashboard")},
-    {title:t("header.navbar.logout"), active:logoutHandle}
-  ]
-  const notLoggedMenu = [
-    {title:t("header.navbar.login"),active: ()=>navigate("login")},
-    {title:t("header.navbar.signUp"), active: ()=>navigate("signup")}
-  ]
-
-  const [menu, setMenu] = useState(notLoggedMenu)
 
   useEffect(()=>{
+    const loggedMenu = [
+      {title:"header.navbar.dashboard", active: ()=>navigate("dashboard")},
+      {title:"header.navbar.logout", active:logoutHandle}
+    ]
+    const notLoggedMenu = [
+      {title:"header.navbar.login",active: ()=>navigate("login")},
+      {title:"header.navbar.signUp", active: ()=>navigate("signup")}
+    ]
     if(user){
       setMenu(loggedMenu)
     }else{
       setMenu(notLoggedMenu)
     }
-  },[user,loggedMenu,notLoggedMenu])
+  },[user])
 
 
   return (
@@ -85,7 +84,7 @@ const Header = ({ user, login }) => {
                 key={index}
                 onClick={item.active}
               >
-                {item.title}
+                {t(item.title)}
               </Nav.Link>))}
 
           </Nav>
