@@ -57,27 +57,27 @@
     },
     "cardComponent": [
       {
-        "img": "./activos/img/tarjeta-1.png",
+        "img": "./assets/img/card-1.png",
         "title": "¿Porque nosotros?",
         "content": "Los ex comerciantes construyen la mejor opción de algoritmo de inteligencia artificial, que genera grandes ganancias en minutos al día. Somos ex-quants con 37 años combinados de experiencia. El software de Optionsfy selecciona el ticker, las huelgas y las fechas de vencimiento por usted para que pueda obtener ganancias sin largas conjeturas. Está alimentado por un algoritmo alimentado con 10 años de datos y 10 factores que han demostrado que funcionan. Optionsfy le ahorra tiempo y lo hace más rentable con operaciones consistentes y de alto rendimiento en minutos en TODOS LOS ENTORNOS DE MERCADO."
       },
       {
-        "img": "./activos/img/tarjeta-2.png",
+        "img": "./assets/img/card-2.png",
         "title": "Ventaja competitiva de la inteligencia artificial",
         "content": "Aproveche el poder de la I.A. líder en la industria. algoritmos respaldados. Algoritmos similares que utilizan los principales fondos de cobertura ahora están al alcance de su mano. Nuestra tecnología HotScore agrega datos de múltiples fuentes para mostrarle de manera rápida y clara las mejores opciones para operar todo HECHO PARA USTED."
       },
       {
-        "img": "./activos/img/tarjeta-3.png",
+        "img": "./assets/img/card-3.png",
         "title": "La velocidad y el tiempo son nuestro núcleo",
         "content": "La velocidad lo es todo en el trading. Con notificaciones perfectamente sincronizadas para colocar operaciones ganadoras por delante de su competencia, nunca pierda otra oportunidad con todas las mejores operaciones de opciones enviadas diariamente a su bandeja de entrada en la apertura del mercado."
       },
       {
-        "img": "./activos/img/tarjeta-4.png",
+        "img": "./assets/img/card-4.png",
         "title": "Escaneo de cadena de opciones incorporado",
         "content": "¿Abrumado por la variación de los precios de ejercicio y qué opciones comprar? Escaneamos toda la cadena de opciones para que no tenga que hacerlo, investigamos cada operación posible con anticipación y le recomendamos las mejores jugadas."
       },
       {
-        "img": "./activos/img/tarjeta-5.png",
+        "img": "./assets/img/card-5.png",
         "title": "Potente tanto para principiantes como para profesionales experimentados",
         "content": "Ya sea que recién esté comenzando su viaje con opciones o trabaje usted mismo en la calle, nuestras herramientas son lo suficientemente fáciles de usar desde el día 1 y le brindan el conocimiento competitivo aprendido de años de prueba y error."
       }

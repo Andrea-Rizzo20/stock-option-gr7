@@ -4,6 +4,7 @@ import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import TradingviewWidget from "react-tradingview-widget";
 
 
 const HomePage = () => {
@@ -40,6 +41,7 @@ const HomePage = () => {
       </section>
       <section id="pricing">
         <OfferSection />
+        <TradingviewWidget symbol="NASDAQ:AAPL" />
       </section>
     </div>
   );

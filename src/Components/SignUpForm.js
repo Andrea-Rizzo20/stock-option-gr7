@@ -9,7 +9,7 @@ const SignUpForm = () => {
     email: "",
     firstName: "",
     lastName: "",
-    phone: "",
+    telephone: "",
     password: "",
     confPassword: "",
     contract: false,
@@ -27,6 +27,24 @@ const SignUpForm = () => {
     });
   };
 
+  //per adesso qui
+
+  const fetchSignup = async(data) =>{
+    const response = await fetch('http://localhost:8080/api/auth/signup',{
+      method:'POST',
+      headers:{
+        "Accept":"application/json",
+        "Content-Type": "application/json",
+      },
+      mode: 'cors',
+      body: JSON.stringify(data)
+    })
+
+    return response
+
+    //test
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
@@ -35,13 +53,24 @@ const SignUpForm = () => {
         email: "",
         firstName: "",
         lastName: "",
-        phone: "",
+        telephone: "",
         password: "",
         confPassword: "",
         contract: false,
       }
     ) {
-      localStorage.setItem("database", JSON.stringify(data));
+        fetchSignup(data).then(response =>{
+          if(response.status === 200){
+          alert(t("header.signUpForm.alert"))
+        }else if(response.status === 400){
+          alert("Prova 1")
+        }else{
+          alert('Prova 2')
+        }
+      })
+
+      // localStorage.setItem("database", JSON.stringify(data));
+
       setData({
         email: "",
         firstName: "",
@@ -53,9 +82,9 @@ const SignUpForm = () => {
       });
       navigate('/');
     }
-    if (localStorage.getItem("database")) {
-      alert(t("header.signUpForm.alert"));
-    }
+    // if (localStorage.getItem("database")) {
+    //   alert(t("header.signUpForm.alert"));
+    // }
   };
 
   return (
@@ -105,7 +134,7 @@ const SignUpForm = () => {
       ></input>
       <input
         type="tel"
-        name="phone"
+        name="telephone"
         value={data.phone}
         placeholder={t("header.signUpForm.phone")}
         className="inputForm text-center"

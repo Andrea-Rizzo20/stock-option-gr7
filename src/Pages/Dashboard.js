@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import TradingViewWidget from 'react-tradingview-widget';
 
 function Dashboard({ user }) {
   const { t } = useTranslation();
@@ -18,6 +19,7 @@ function Dashboard({ user }) {
           <article key={item.id}>
             <h2>{item.title}</h2>
             <p>{item.content}</p>
+            <TradingViewWidget symbol="NASDAQ:AAPL" />
           </article>
         ))}
       </div>

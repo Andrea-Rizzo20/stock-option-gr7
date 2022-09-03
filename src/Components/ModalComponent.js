@@ -8,10 +8,10 @@ function ModalComponent(props) {
   const { renderKey, login, ...rest } = props;
   const navigate = useNavigate();
   const { t } = useTranslation();
-  useEffect(()=>{
-    console.log('monta')
-    return ()=> console.log('smonta')
-  },[])
+  // useEffect(()=>{
+  //   console.log('monta')
+  //   return ()=> console.log('smonta')
+  // },[])
   return (
     <Modal
       {...rest}
