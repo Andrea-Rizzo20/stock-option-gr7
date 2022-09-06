@@ -1,5 +1,5 @@
 {
-  "fetchAlert":"la cuenta ya existe",
+  "fetchAlert": "la cuenta ya existe",
   "language": {
     "english": "INGLÉS",
     "spanish": "ESPAÑOL",
@@ -29,6 +29,8 @@
     },
     "signUpForm": {
       "alert": "Registro completado con éxito",
+      "alertMail": "Correo electrónico ya en uso",
+      "alertError": "Intentar otra vez",
       "firstName": "Primer nombre",
       "lastName": "Apellido",
       "email": "Correo electrónico",

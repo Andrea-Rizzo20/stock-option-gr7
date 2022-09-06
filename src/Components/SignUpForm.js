@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-
 const SignUpForm = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -27,23 +26,20 @@ const SignUpForm = () => {
     });
   };
 
-  //per adesso qui
-
-  const fetchSignup = async(data) =>{
-    const response = await fetch('http://localhost:8080/api/auth/signup',{
-      method:'POST',
-      headers:{
-        "Accept":"application/json",
+  const fetchSignup = async (data) => {
+    const { confPassword, ...userData } = data;
+    const response = await fetch("http://localhost:8080/api/auth/signup", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      mode: 'cors',
-      body: JSON.stringify(data)
-    })
+      mode: "cors",
+      body: JSON.stringify(userData),
+    });
 
-    return response
-
-    //test
-  }
+    return response;
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -59,17 +55,15 @@ const SignUpForm = () => {
         contract: false,
       }
     ) {
-        fetchSignup(data).then(response =>{
-          if(response.status === 200){
-          alert(t("header.signUpForm.alert"))
-        }else if(response.status === 400){
-          alert("Prova 1")
-        }else{
-          alert('Prova 2')
+      fetchSignup(data).then((response) => {
+        if (response.status === 200) {
+          alert(t("header.signUpForm.alert"));
+        } else if (response.status === 400) {
+          alert(t("header.signUpForm.alertMail"));
+        } else {
+          alert(t("header.signUpForm.alertError"));
         }
-      })
-
-      // localStorage.setItem("database", JSON.stringify(data));
+      });
 
       setData({
         email: "",
@@ -80,11 +74,8 @@ const SignUpForm = () => {
         confPassword: "",
         contract: false,
       });
-      navigate('/');
+      navigate("/");
     }
-    // if (localStorage.getItem("database")) {
-    //   alert(t("header.signUpForm.alert"));
-    // }
   };
 
   return (
@@ -95,6 +86,7 @@ const SignUpForm = () => {
       <input
         type="text"
         name="firstName"
+        required
         value={data.firstName}
         placeholder={t("header.signUpForm.firstName")}
         className="inputForm text-center"
@@ -103,6 +95,7 @@ const SignUpForm = () => {
       <input
         type="text"
         name="lastName"
+        required
         value={data.lastName}
         placeholder={t("header.signUpForm.lastName")}
         className="inputForm text-center"
@@ -110,6 +103,7 @@ const SignUpForm = () => {
       ></input>
       <input
         type="email"
+        required
         name="email"
         value={data.email}
         placeholder={t("header.signUpForm.email")}
@@ -118,6 +112,7 @@ const SignUpForm = () => {
       ></input>
       <input
         type="password"
+        required
         name="password"
         value={data.password}
         placeholder={t("header.signUpForm.password")}
@@ -127,6 +122,7 @@ const SignUpForm = () => {
       <input
         type="password"
         name="confPassword"
+        required
         value={data.confPassword}
         placeholder={t("header.signUpForm.confirmPassword")}
         className="inputForm text-center"
@@ -136,6 +132,7 @@ const SignUpForm = () => {
         type="tel"
         name="telephone"
         value={data.phone}
+        required
         placeholder={t("header.signUpForm.phone")}
         className="inputForm text-center"
         onChange={inputHandle}
@@ -143,6 +140,7 @@ const SignUpForm = () => {
       <div className="d-flex gap-2">
         <input
           type="checkbox"
+          required
           checked={data.contract}
           name="contract"
           id="contract"

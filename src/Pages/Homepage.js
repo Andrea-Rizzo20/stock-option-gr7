@@ -4,19 +4,17 @@ import { OfferSection } from "../components/OfferSection";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import TradingviewWidget from "react-tradingview-widget";
 
-
-const HomePage = () => {
+const HomePage = ({ user }) => {
   const { t } = useTranslation();
 
-  useEffect(()=>{
-    document.title = 'Homepage | Optionsfy';
-  },[])
+  useEffect(() => {
+    document.title = "Homepage | Optionsfy";
+  }, []);
 
   return (
     <div>
-      <Outlet/>
+      <Outlet />
       <Hero />
       <section className="fluid-container" id="features">
         {t("homepage.cardComponent", { returnObjects: true }).map(
@@ -40,8 +38,7 @@ const HomePage = () => {
         )}
       </section>
       <section id="pricing">
-        <OfferSection />
-        <TradingviewWidget symbol="NASDAQ:AAPL" />
+        <OfferSection user={user} />
       </section>
     </div>
   );

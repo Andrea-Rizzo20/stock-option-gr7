@@ -9,7 +9,7 @@ const TabsComponent = ({ renderKey, login }) => {
     <Tabs
       defaultActiveKey={renderKey}
       id="uncontrolled-tab-example"
-      className="mb-3 d-flex flex-row justify-content-center gap-2  w-100"
+      className="d-flex mb-3 d-flex flex-row justify-content-center"
     >
       <Tab eventKey="login" title={t("header.tabsComponent.login")}>
         <LoginForm login={login} />

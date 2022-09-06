@@ -1,5 +1,5 @@
 {
-  "fetchAlert":"Account already exists",
+  "fetchAlert": "Account already exists",
   "language": {
     "english": "ENGLISH",
     "spanish": "SPANISH",
@@ -29,6 +29,8 @@
     },
     "signUpForm": {
       "alert": "Registration completed successfully",
+      "alertMail": "Email already in use",
+      "alertError": "Retry",
       "firstName": "First Name",
       "lastName": "Last Name",
       "email": "Email",

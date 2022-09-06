@@ -9,34 +9,32 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 
 const Header = ({ user, login }) => {
-
   const navigate = useNavigate();
 
   const { t } = useTranslation();
 
-  const logoutHandle = () =>{
+  const logoutHandle = () => {
     login(false);
     localStorage.removeItem("user");
-  }
-  const [menu, setMenu] = useState([])
+  };
+  const [menu, setMenu] = useState([]);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     const loggedMenu = [
-      {title:"header.navbar.dashboard", active: ()=>navigate("dashboard")},
-      {title:"header.navbar.logout", active:logoutHandle}
-    ]
+      { title: "header.navbar.dashboard", active: () => navigate("dashboard") },
+      { title: "header.navbar.logout", active: logoutHandle },
+    ];
     const notLoggedMenu = [
-      {title:"header.navbar.login",active: ()=>navigate("login")},
-      {title:"header.navbar.signUp", active: ()=>navigate("signup")}
-    ]
-    if(user){
-      setMenu(loggedMenu)
-    }else{
-      setMenu(notLoggedMenu)
+      { title: "header.navbar.login", active: () => navigate("login") },
+      { title: "header.navbar.signUp", active: () => navigate("signup") },
+    ];
+    if (user) {
+      setMenu(loggedMenu);
+    } else {
+      setMenu(notLoggedMenu);
     }
-  },[user])
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
 
   return (
     <Navbar className="heroGradient" expand="md">
@@ -78,18 +76,19 @@ const Header = ({ user, login }) => {
                 alt="Optionsfy Logo"
               />
             </Navbar.Brand>
-            {menu.map((item,index) =>(
+            {menu.map((item, index) => (
               <Nav.Link
                 className="text-white"
                 key={index}
                 onClick={item.active}
               >
                 {t(item.title)}
-              </Nav.Link>))}
+              </Nav.Link>
+            ))}
 
+            <LanguageSelector />
           </Nav>
         </Navbar.Collapse>
-      <LanguageSelector />
       </Container>
     </Navbar>
   );

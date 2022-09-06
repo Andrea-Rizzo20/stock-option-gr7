@@ -1,5 +1,5 @@
 {
-  "fetchAlert":"L'account esiste gia'",
+  "fetchAlert": "L'account esiste gia'",
   "language": {
     "english": "INGLESE",
     "spanish": "SPAGNOLO",
@@ -29,10 +29,12 @@
     },
     "signUpForm": {
       "alert": "Registrazione completata con successo",
+      "alertMail": "Email già in uso",
+      "alertError": "Riprova",
       "firstName": "Nome di battesimo",
       "lastName": "Cognome",
       "email": "E-mail",
-      "password": "Parola d'ordine",
+      "password": "Password",
       "confirmPassword": "Conferma password",
       "phone": "Telefono",
       "contract": "Accetto i Termini di servizio",

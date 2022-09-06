@@ -1,28 +1,24 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import TradingViewWidget from 'react-tradingview-widget';
+import TradingViewWidget from "react-tradingview-widget";
 
 function Dashboard({ user }) {
   const { t } = useTranslation();
 
-  useEffect(()=>{
-    document.title = 'Dashboard | Optionsfy';
-  },[])
+  useEffect(() => {
+    document.title = "Dashboard | Optionsfy";
+  }, []);
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
-      <h1>
-        {t("dashboard.welcome")} {user.firstName} {user.lastName}
+    <div className="d-flex py-5 flex-column justify-content-center align-items-center">
+      <h1 className="mb-5">
+        {t("dashboard.welcome")}{" "}
+        {String(user.firstName).charAt(0).toUpperCase() +
+          String(user.firstName).slice(1)}{" "}
+        {String(user.lastName).charAt(0).toUpperCase() +
+          String(user.lastName).slice(1)}
       </h1>
-      <div className="col-md-12 d-flex  text-md-start text-center gap-5 px-3 flex-column flex-md-row ">
-        {t("dashboard.texts", { returnObjects: true }).map((item) => (
-          <article key={item.id}>
-            <h2>{item.title}</h2>
-            <p>{item.content}</p>
-            <TradingViewWidget symbol="NASDAQ:AAPL" />
-          </article>
-        ))}
-      </div>
+      <TradingViewWidget symbol="NASDAQ:AAPL" />
     </div>
   );
 }
