@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const LoginForm = ({ showModal, login }) => {
+const LoginForm = ({ login }) => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const inputHandle = (event) => {
@@ -18,17 +19,40 @@ const LoginForm = ({ showModal, login }) => {
       };
     });
   };
+
+  const fetchSignin = async (data) => {
+    const response = await fetch("http://localhost:8080/api/auth/signin", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify(data),
+    });
+
+    return response;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const database = JSON.parse(localStorage.getItem("database"));
-    if (data.email === database.email && data.password === database.password) {
-      localStorage.setItem("user", JSON.stringify(database));
-      showModal();
-      login();
-    } else {
-      alert(t("header.loginForm.alert"));
-    }
+    fetchSignin(data)
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          alert(t("header.loginForm.alert"));
+          return null;
+        }
+      })
+      .then((data) => {
+        if (data) {
+          localStorage.setItem("user", JSON.stringify(data));
+          login(true);
+          navigate("/");
+        }
+      });
 
     setData({
       email: "",

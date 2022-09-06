@@ -1,9 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { CheckIcon } from "../utils/CheckIcon";
 
-export function OfferCard({ specialoffer }) {
+export function OfferCard({ specialoffer, user }) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="bg-white border cardborders w-100 my-5 d-flex flex-column justify-content-evenly">
@@ -65,15 +67,27 @@ export function OfferCard({ specialoffer }) {
       )}
       {specialoffer ? (
         <div className="d-flex justify-content-center py-3">
-          <button type="submit" className="offerButton2">
-            {t("homepage.offerCard.subscribe")}
-          </button>
+          {!user && (
+            <button
+              type="button"
+              onClick={() => navigate("/signup")}
+              className="offerButton2"
+            >
+              {t("homepage.offerCard.subscribe")}
+            </button>
+          )}
         </div>
       ) : (
         <div className="d-flex justify-content-center py-3">
-          <button type="submit" className="offerButton1">
-            {t("homepage.offerCard.subscribe")}
-          </button>
+          {!user && (
+            <button
+              type="button"
+              onClick={() => navigate("/signup")}
+              className="offerButton1"
+            >
+              {t("homepage.offerCard.subscribe")}
+            </button>
+          )}
         </div>
       )}
     </div>

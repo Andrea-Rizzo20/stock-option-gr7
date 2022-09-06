@@ -3,19 +3,19 @@ import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
 import { useTranslation } from "react-i18next";
 
-const TabsComponent = ({ renderKey, showModal, login }) => {
+const TabsComponent = ({ renderKey, login }) => {
   const { t } = useTranslation();
   return (
     <Tabs
       defaultActiveKey={renderKey}
       id="uncontrolled-tab-example"
-      className="mb-3 d-flex flex-row justify-content-center gap-2  w-100"
+      className="d-flex mb-3 d-flex flex-row justify-content-center"
     >
       <Tab eventKey="login" title={t("header.tabsComponent.login")}>
-        <LoginForm showModal={showModal} login={login} />
+        <LoginForm login={login} />
       </Tab>
       <Tab eventKey="signup" title={t("header.tabsComponent.signUp")}>
-        <SignUpForm showModal={showModal} />
+        <SignUpForm />
       </Tab>
     </Tabs>
   );

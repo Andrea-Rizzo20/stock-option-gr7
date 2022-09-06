@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-const SignUpForm = ({ showModal }) => {
+const SignUpForm = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     firstName: "",
     lastName: "",
-    phone: "",
+    telephone: "",
     password: "",
     confPassword: "",
     contract: false,
@@ -24,6 +26,21 @@ const SignUpForm = ({ showModal }) => {
     });
   };
 
+  const fetchSignup = async (data) => {
+    const { confPassword, ...userData } = data;
+    const response = await fetch("http://localhost:8080/api/auth/signup", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify(userData),
+    });
+
+    return response;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
@@ -32,13 +49,22 @@ const SignUpForm = ({ showModal }) => {
         email: "",
         firstName: "",
         lastName: "",
-        phone: "",
+        telephone: "",
         password: "",
         confPassword: "",
         contract: false,
       }
     ) {
-      localStorage.setItem("database", JSON.stringify(data));
+      fetchSignup(data).then((response) => {
+        if (response.status === 200) {
+          alert(t("header.signUpForm.alert"));
+        } else if (response.status === 400) {
+          alert(t("header.signUpForm.alertMail"));
+        } else {
+          alert(t("header.signUpForm.alertError"));
+        }
+      });
+
       setData({
         email: "",
         firstName: "",
@@ -48,10 +74,7 @@ const SignUpForm = ({ showModal }) => {
         confPassword: "",
         contract: false,
       });
-      showModal();
-    }
-    if (localStorage.getItem("database")) {
-      alert(t("header.signUpForm.alert"));
+      navigate("/");
     }
   };
 
@@ -63,6 +86,7 @@ const SignUpForm = ({ showModal }) => {
       <input
         type="text"
         name="firstName"
+        required
         value={data.firstName}
         placeholder={t("header.signUpForm.firstName")}
         className="inputForm text-center"
@@ -71,6 +95,7 @@ const SignUpForm = ({ showModal }) => {
       <input
         type="text"
         name="lastName"
+        required
         value={data.lastName}
         placeholder={t("header.signUpForm.lastName")}
         className="inputForm text-center"
@@ -78,6 +103,7 @@ const SignUpForm = ({ showModal }) => {
       ></input>
       <input
         type="email"
+        required
         name="email"
         value={data.email}
         placeholder={t("header.signUpForm.email")}
@@ -86,6 +112,7 @@ const SignUpForm = ({ showModal }) => {
       ></input>
       <input
         type="password"
+        required
         name="password"
         value={data.password}
         placeholder={t("header.signUpForm.password")}
@@ -95,6 +122,7 @@ const SignUpForm = ({ showModal }) => {
       <input
         type="password"
         name="confPassword"
+        required
         value={data.confPassword}
         placeholder={t("header.signUpForm.confirmPassword")}
         className="inputForm text-center"
@@ -102,8 +130,9 @@ const SignUpForm = ({ showModal }) => {
       ></input>
       <input
         type="tel"
-        name="phone"
+        name="telephone"
         value={data.phone}
+        required
         placeholder={t("header.signUpForm.phone")}
         className="inputForm text-center"
         onChange={inputHandle}
@@ -111,6 +140,7 @@ const SignUpForm = ({ showModal }) => {
       <div className="d-flex gap-2">
         <input
           type="checkbox"
+          required
           checked={data.contract}
           name="contract"
           id="contract"
