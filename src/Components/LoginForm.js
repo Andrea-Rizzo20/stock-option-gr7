@@ -34,6 +34,8 @@ const LoginForm = ({ login }) => {
     return response;
   };
 
+  const emailValidatePattern = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -73,6 +75,7 @@ const LoginForm = ({ login }) => {
           className="inputForm text-center"
           value={data.email}
           onChange={inputHandle}
+          pattern ={emailValidatePattern}
         ></input>
         <input
           type="password"

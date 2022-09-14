@@ -40,10 +40,10 @@ const Header = ({ user, login }) => {
     <Navbar className="heroGradient" expand="md">
       <Container className="justify-content-space-between">
         <Navbar.Brand
-          className="w-25 d-inline d-md-none"
+          className="w-25 d-inline d-md-none cursor"
           onClick={() => navigate("/")}
         >
-          <img src={logoMobile} alt="logo optionsfy" className="w-50" />
+          <img src={logoMobile} alt="logo optionsfy" style={{cursor:"pointer"}} className="w-50" />
         </Navbar.Brand>
         <Navbar.Toggle
           className="justify-content-end border-0 burgerMenu "
@@ -59,21 +59,22 @@ const Header = ({ user, login }) => {
           <Nav className="d-flex gap-md-4 gap-0 justify-content-center align-items-end align-items-md-center">
             <HashLink
               className="text-white text-decoration-none"
-              to="/home#pricing"
+              to="/#pricing"
             >
               {t("header.navbar.pricing")}
             </HashLink>
             <HashLink
               className="text-white text-decoration-none"
-              to="/home#features"
+              to="/#features"
             >
               {t("header.navbar.features")}
             </HashLink>
-            <Navbar.Brand className="w-25 py-0" onClick={() => navigate("/")}>
+            <Navbar.Brand className="w-25 py-0 cursor" onClick={() => navigate("/")}>
               <img
                 src={logo}
                 className="w-100 mx-0 d-none d-md-flex"
                 alt="Optionsfy Logo"
+                style={{cursor:"pointer"}}
               />
             </Navbar.Brand>
             {menu.map((item, index) => (

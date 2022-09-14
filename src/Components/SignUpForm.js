@@ -14,6 +14,8 @@ const SignUpForm = () => {
     contract: false,
   });
 
+  const emailValidatePattern = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
+
   const { t } = useTranslation();
 
   const inputHandle = (event) => {
@@ -91,6 +93,7 @@ const SignUpForm = () => {
         placeholder={t("header.signUpForm.firstName")}
         className="inputForm text-center"
         onChange={inputHandle}
+        pattern="[A-Za-z]{1,32}"
       ></input>
       <input
         type="text"
@@ -100,6 +103,7 @@ const SignUpForm = () => {
         placeholder={t("header.signUpForm.lastName")}
         className="inputForm text-center"
         onChange={inputHandle}
+        pattern="[A-Za-z]{1,32}"
       ></input>
       <input
         type="email"
@@ -109,6 +113,7 @@ const SignUpForm = () => {
         placeholder={t("header.signUpForm.email")}
         className="inputForm text-center"
         onChange={inputHandle}
+        pattern={emailValidatePattern}
       ></input>
       <input
         type="password"
@@ -136,6 +141,7 @@ const SignUpForm = () => {
         placeholder={t("header.signUpForm.phone")}
         className="inputForm text-center"
         onChange={inputHandle}
+        pattern="[0-9]{10}"
       ></input>
       <div className="d-flex gap-2">
         <input
